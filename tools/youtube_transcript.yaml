@@ -1,0 +1,48 @@
+identity:
+  name: youtube_transcript
+  author: flashdata-dev
+  label:
+    en_US: YouTube Transcript
+description:
+  human:
+    en_US: Get timestamped YouTube subtitles. Choose language and automatic or manually
+      created captions; no fallback between caption types or languages is performed.
+  llm: Get timestamped YouTube subtitles. Choose language and automatic or manually
+    created captions; no fallback between caption types or languages is performed.
+parameters:
+- name: video_id
+  type: string
+  required: true
+  label:
+    en_US: YouTube video
+  human_description:
+    en_US: An 11-character video ID or a youtube.com / youtu.be video URL. The URL
+      is parsed locally; only the video ID is sent to FlashData.
+  llm_description: An 11-character video ID or a youtube.com / youtu.be video URL.
+    The URL is parsed locally; only the video ID is sent to FlashData.
+  form: llm
+- name: language
+  type: string
+  required: false
+  label:
+    en_US: Caption language
+  human_description:
+    en_US: Caption language code, such as en. No language fallback.
+  llm_description: Caption language code, such as en. No language fallback.
+  form: llm
+  default: en
+- name: auto
+  type: boolean
+  required: false
+  label:
+    en_US: Automatic captions
+  human_description:
+    en_US: True selects automatic captions; false selects manual captions. No fallback
+      between the two.
+  llm_description: True selects automatic captions; false selects manual captions.
+    No fallback between the two.
+  form: llm
+  default: true
+extra:
+  python:
+    source: tools/youtube_transcript.py

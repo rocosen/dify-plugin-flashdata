@@ -1,0 +1,38 @@
+version: 0.1.0
+type: plugin
+author: flashdata-dev
+name: flashdata
+label:
+  en_US: FlashData
+  zh_Hans: FlashData
+description:
+  en_US: Google Search and YouTube search, metadata, and transcripts for research workflows and agents.
+  zh_Hans: 为研究工作流和 Agent 提供 Google 搜索、YouTube 搜索、视频信息和字幕。
+icon: icon.svg
+created_at: '2026-10-09T09:00:00Z'
+resource:
+  memory: 268435456
+  permission: {}
+plugins:
+  tools:
+    - provider/flashdata.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: '3.12'
+    entrypoint: main
+  minimum_dify_version: 1.17.1
+tags:
+  - search
+  - videos
+privacy: PRIVACY.md
+repo: https://github.com/flashdata-dev/dify-plugin-flashdata
+contact: support@flashdata.dev
+network:
+  domains:
+    - api.flashdata.dev
+    - data.flashdata.dev

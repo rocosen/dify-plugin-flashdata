@@ -1,0 +1,38 @@
+identity:
+  name: youtube_search
+  author: flashdata-dev
+  label:
+    en_US: YouTube Search
+description:
+  human:
+    en_US: Find YouTube videos by keywords and return video IDs and available titles,
+      channels and metadata.
+  llm: Find YouTube videos by keywords and return video IDs and available titles,
+    channels and metadata.
+parameters:
+- name: query
+  type: string
+  required: true
+  label:
+    en_US: Search query
+  human_description:
+    en_US: Search terms, between 1 and 2,000 characters. Do not include secrets or
+      unnecessary personal data.
+  llm_description: Search terms, between 1 and 2,000 characters. Do not include secrets
+    or unnecessary personal data.
+  form: llm
+- name: max_results
+  type: number
+  required: false
+  label:
+    en_US: Result count
+  human_description:
+    en_US: Maximum videos to return, 1-20.
+  llm_description: Maximum videos to return, 1-20.
+  form: llm
+  default: 10
+  min: 1
+  max: 20
+extra:
+  python:
+    source: tools/youtube_search.py

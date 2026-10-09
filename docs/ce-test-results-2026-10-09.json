@@ -1,0 +1,75 @@
+{
+  "environment": "Dify Community Edition 1.17.1 / plugin daemon 0.6.10-local / arm64",
+  "plugin_version": "0.1.0",
+  "credential_validation": "HTTP 200; free GET /v2/api-access",
+  "tests": [
+    {
+      "tool": "google_search",
+      "workflow_status": "succeeded",
+      "workflow_run_id": "26b5c382-5d60-4b4d-9fd4-b21af2ce776d",
+      "api_status": "done",
+      "api_created_at": "2026-10-09T09:36:37.324Z",
+      "usage": {
+        "credits": 0.008
+      },
+      "result_array_lengths": {
+        "organic": 3,
+        "peopleAlsoAsk": 4,
+        "relatedSearches": 8
+      }
+    },
+    {
+      "tool": "youtube_search",
+      "workflow_status": "succeeded",
+      "workflow_run_id": "9a8320ec-ce63-41bc-a988-5b672336a8f1",
+      "api_status": "done",
+      "api_created_at": "2026-10-09T09:37:06.203Z",
+      "usage": {
+        "credits": 0.004
+      },
+      "result_array_lengths": {
+        "results": 1
+      }
+    },
+    {
+      "tool": "youtube_metadata",
+      "workflow_status": "succeeded",
+      "workflow_run_id": "fb280014-1874-4302-8c12-7a0aeb7acd49",
+      "api_status": "done",
+      "api_created_at": "2026-10-09T09:37:08.012Z",
+      "usage": {
+        "credits": 0.004
+      },
+      "result_array_lengths": {
+        "categories": 1,
+        "tags": 27,
+        "thumbnails": 42,
+        "transcriptLanguages": 160
+      }
+    },
+    {
+      "tool": "youtube_transcript",
+      "workflow_status": "succeeded",
+      "workflow_run_id": "4667b248-9ec6-485a-aabb-9f4f9fa2c15f",
+      "api_status": "done",
+      "api_created_at": "2026-10-09T09:37:11.877Z",
+      "usage": {
+        "credits": 0.004
+      },
+      "result_array_lengths": {
+        "segments": 61
+      }
+    }
+  ],
+  "total_credits": 0.02,
+  "limitations": [
+    "Dify Cloud not tested",
+    "A live LLM Agent app was not tested; README contains an Agent setup example",
+    "No Marketplace approval or listing confirmed"
+  ],
+  "runtime_test_package_sha256": "f7608f9c61526e8c7e6797ebe1b4c9fa254dd456af7339e18ac143bab84805bd",
+  "release_package_sha256": "aa345ad75a53722ea06c43b9f3780a42b265dd04c106fba4ee88218e47bbcdee",
+  "release_package_bytes": 14672,
+  "release_installation": "success; flashdata-dev/flashdata:0.1.0@d6b5bce402ee64f97c507bc51535a20fc706ec7e39ecac6ee20a2c92d035682d",
+  "release_difference": "Only PRIVACY.md gained verified upstream privacy links after the four workflow runs. Runtime source/dependencies are unchanged; the final release package was reinstalled successfully."
+}
