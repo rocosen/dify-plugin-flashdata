@@ -36,4 +36,24 @@ Outputs are under `dist/task-plugins/`, including SHA256SUMS and packages.json. 
 
 ## Publication status
 
-Packages and Marketplace submissions are being prepared. A release or GitHub documentation page is not proof that a Marketplace listing is live. See `docs/independent-plugins-2026-10-13.md` for validation and the per-package submission register once published.
+As of 2026-10-13, all 15 version 0.1.0 packages are [released](https://github.com/flashdata-dev/dify-plugin-flashdata/releases/tag/task-plugins-v0.1.0) and submitted separately to the official Marketplace repository. All 15 pull requests are open; the 30 official checks passed. Human review and public listing verification remain pending. Package publication and successful checks do not mean Marketplace approval or search visibility.
+
+| Plugin | Official submission | Review status |
+| --- | --- | --- |
+| Google Search | [#3304](https://github.com/langgenius/dify-plugins/pull/3304) | Open; automated checks passed; awaiting review |
+| Google News | [#3305](https://github.com/langgenius/dify-plugins/pull/3305) | Open; automated checks passed; awaiting review |
+| Google Images | [#3306](https://github.com/langgenius/dify-plugins/pull/3306) | Open; automated checks passed; awaiting review |
+| Google Shopping | [#3307](https://github.com/langgenius/dify-plugins/pull/3307) | Open; automated checks passed; awaiting review |
+| Google Video Search | [#3308](https://github.com/langgenius/dify-plugins/pull/3308) | Open; automated checks passed; awaiting review |
+| Google Places | [#3309](https://github.com/langgenius/dify-plugins/pull/3309) | Open; automated checks passed; awaiting review |
+| YouTube Search | [#3310](https://github.com/langgenius/dify-plugins/pull/3310) | Open; automated checks passed; awaiting review |
+| YouTube Extended Search | [#3311](https://github.com/langgenius/dify-plugins/pull/3311) | Open; automated checks passed; awaiting review |
+| YouTube Video Metadata | [#3312](https://github.com/langgenius/dify-plugins/pull/3312) | Open; automated checks passed; awaiting review |
+| YouTube Transcript | [#3313](https://github.com/langgenius/dify-plugins/pull/3313) | Open; automated checks passed; awaiting review |
+| YouTube Captions | [#3314](https://github.com/langgenius/dify-plugins/pull/3314) | Open; automated checks passed; awaiting review |
+| YouTube License Metadata | [#3315](https://github.com/langgenius/dify-plugins/pull/3315) | Open; automated checks passed; awaiting review |
+| YouTube Channel Data | [#3316](https://github.com/langgenius/dify-plugins/pull/3316) | Open; automated checks passed; awaiting review |
+| YouTube Autocomplete | [#3317](https://github.com/langgenius/dify-plugins/pull/3317) | Open; automated checks passed; awaiting review |
+| YouTube Download | [#3318](https://github.com/langgenius/dify-plugins/pull/3318) | Open; automated checks passed; awaiting review |
+
+The existing `flashdata-dev/flashdata` bundle is maintained separately for compatibility; [update PR #3303](https://github.com/langgenius/dify-plugins/pull/3303) does not replace these dedicated submissions. See [validation notes](../docs/independent-plugins-2026-10-13.md) for the exact test scope. Dify Cloud and real model-agent execution have not been tested for this split.
