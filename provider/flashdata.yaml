@@ -2,7 +2,7 @@ identity:
   author: flashdata-dev
   name: flashdata
   label:
-    en_US: Google & YouTube Data by FlashData
+    en_US: Google Search & YouTube Tools
   description:
     en_US: Google web, news, image, shopping, video and places search; YouTube transcripts,
       captions, channel data, autocomplete, metadata, license labels and downloads.
