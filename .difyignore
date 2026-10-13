@@ -16,3 +16,4 @@ scripts/
 docs/
 validation-report/
 .ruff_cache/
+plugins/
