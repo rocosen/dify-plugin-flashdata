@@ -1,6 +1,6 @@
 # YouTube Transcript
 
-Retrieve existing timestamped subtitles and full text in a selected language. Defaults to automatically generated captions. No speech recognition, translation or silent fallback to another track.
+Retrieve an existing YouTube transcript as timestamped subtitle segments and full text. Use the text for a video summary and preserve timestamps for citations. The default selects automatic captions; this tool does not perform speech recognition, translation or fallback to another track.
 
 Use this dedicated **YouTube Transcript** plugin in a Dify workflow or tool-capable agent. Powered by **FlashData**; API queries use paid credits. No separate Google or YouTube API key is required.
 
@@ -22,6 +22,14 @@ Open this plugin's provider settings and enter your [FlashData API key](https://
 2. Select your FlashData credential in the **YouTube Transcript** node.
 3. Supply the Start input and run once. The example connects **Start → YouTube Transcript → End**.
 
+Enter only `video_id` in **Start**. Change the other settings in the tool node before running; the JSON below shows the combined configuration, not text to paste into Start.
+
+| Field | Where to set it | Example | Meaning |
+| --- | --- | --- | --- |
+| `video_id` | Start input | `dQw4w9WgXcQ` | YouTube video ID or supported YouTube video URL. |
+| `language` | Tool node setting | `en` | Requested caption language or suggestion language. |
+| `auto` | Tool node setting | `true` | Select automatic captions when true; uploader-provided captions when false. |
+
 Example input and tool settings:
 
 ```json
@@ -32,7 +40,13 @@ Example input and tool settings:
 }
 ```
 
-Read `results[0].segments` and `fullText`. Segments contain `start`, `end` and `text`, with times in seconds. Preserve timestamps for citations or convert them to SRT/WebVTT in a subsequent node. Default `auto=true` selects automatic captions.
+## Use the output
+
+The tool emits `text` (a JSON string) and `json` (Dify's array of JSON messages). The imported workflow maps `json` to the End variable **results**. Take the first message object before reading the API fields below. For example, the full path from this workflow's End output is `results[0].results[0].segments`.
+
+In a downstream node, select the tool's `json` output for structured processing, or its `text` output for a prompt. Check that the response contains the expected data before iterating. The examples below show the **API response object**, without Dify's outer message array.
+
+Read `results[0].segments` and `results[0].fullText`. Segments contain `start`, `end` and `text`, with times in seconds. Preserve timestamps for citations or convert them to SRT/WebVTT in a subsequent node. Default `auto=true` selects automatic captions.
 
 Illustrative response excerpt, not a live result or a promise of fields returned:
 

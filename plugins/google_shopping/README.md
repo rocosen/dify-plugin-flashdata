@@ -1,6 +1,6 @@
 # Google Shopping
 
-Search product listings with available prices, merchants and links. Capture a comparison snapshot; prices and availability can change.
+Run a Google Shopping product search to compare merchant listings for the same query. Return available price labels and offer links for a shopping comparison workflow. Keep a dated snapshot: prices, variants and availability can change.
 
 Use this dedicated **Google Shopping** plugin in a Dify workflow or tool-capable agent. Powered by **FlashData**; API queries use paid credits. No separate Google or YouTube API key is required.
 
@@ -22,6 +22,14 @@ Open this plugin's provider settings and enter your [FlashData API key](https://
 2. Select your FlashData credential in the **Google Shopping** node.
 3. Supply the Start input and run once. The example connects **Start → Google Shopping → End**.
 
+Enter only `query` in **Start**. Change the other settings in the tool node before running; the JSON below shows the combined configuration, not text to paste into Start.
+
+| Field | Where to set it | Example | Meaning |
+| --- | --- | --- | --- |
+| `query` | Start input | `usb c dock` | Topic or search phrase. |
+| `gl` | Tool node setting | `us` | Country code for the shopping search. |
+| `num` | Tool node setting | `5` | Requested result count; fewer results may be available. |
+
 Example input and tool settings:
 
 ```json
@@ -31,6 +39,12 @@ Example input and tool settings:
   "num": 5
 }
 ```
+
+## Use the output
+
+The tool emits `text` (a JSON string) and `json` (Dify's array of JSON messages). The imported workflow maps `json` to the End variable **results**. Take the first message object before reading the API fields below. For example, the full path from this workflow's End output is `results[0].results[0].shopping`.
+
+In a downstream node, select the tool's `json` output for structured processing, or its `text` output for a prompt. Check that the response contains the expected data before iterating. The examples below show the **API response object**, without Dify's outer message array.
 
 Read `results[0].shopping`. Compare `title`, `productId`, merchant `source`, `price` and `link`. Keep variants and currencies separate; an offer snapshot does not guarantee inventory or checkout price.
 

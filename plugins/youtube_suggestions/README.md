@@ -1,6 +1,6 @@
 # YouTube Autocomplete
 
-Get autocomplete phrases for a query prefix in a selected language and region. Use them to explore related topics; they are suggestions, not search-volume estimates.
+Get YouTube autocomplete search suggestions for a query prefix, language and region. Use the phrases to explore related topics before choosing a search query. Suggestions do not include search-volume estimates.
 
 Use this dedicated **YouTube Autocomplete** plugin in a Dify workflow or tool-capable agent. Powered by **FlashData**; API queries use paid credits. No separate Google or YouTube API key is required.
 
@@ -22,6 +22,14 @@ Open this plugin's provider settings and enter your [FlashData API key](https://
 2. Select your FlashData credential in the **YouTube Autocomplete** node.
 3. Supply the Start input and run once. The example connects **Start → YouTube Autocomplete → End**.
 
+Enter only `query` in **Start**. Change the other settings in the tool node before running; the JSON below shows the combined configuration, not text to paste into Start.
+
+| Field | Where to set it | Example | Meaning |
+| --- | --- | --- | --- |
+| `query` | Start input | `how to build` | Topic or search phrase. |
+| `language` | Tool node setting | `en` | Requested caption language or suggestion language. |
+| `region` | Tool node setting | `US` | Region code for autocomplete suggestions. |
+
 Example input and tool settings:
 
 ```json
@@ -31,6 +39,12 @@ Example input and tool settings:
   "region": "US"
 }
 ```
+
+## Use the output
+
+The tool emits `text` (a JSON string) and `json` (Dify's array of JSON messages). The imported workflow maps `json` to the End variable **results**. Take the first message object before reading the API fields below. For example, the full path from this workflow's End output is `results[0].results[0]`.
+
+In a downstream node, select the tool's `json` output for structured processing, or its `text` output for a prompt. Check that the response contains the expected data before iterating. The examples below show the **API response object**, without Dify's outer message array.
 
 Read `results[0]`, an array of strings. Return suggestions as a list or use them to expand a topic. To compare regions, run the same prefix with different `region` values; each query is billed. These phrases are not search-volume measurements.
 

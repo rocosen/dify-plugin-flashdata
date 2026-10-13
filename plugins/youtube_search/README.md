@@ -1,6 +1,6 @@
 # YouTube Search
 
-Find YouTube videos for a topic, with optional upload-date, duration, type, feature and sort filters. Request 1–20 results; actual results may be fewer.
+Find YouTube videos about a topic and pass their video IDs to a later metadata or transcript step. Filter by upload date, duration, type, features or sort order. Request 1–20 results; actual results may be fewer.
 
 Use this dedicated **YouTube Search** plugin in a Dify workflow or tool-capable agent. Powered by **FlashData**; API queries use paid credits. No separate Google or YouTube API key is required.
 
@@ -22,6 +22,14 @@ Open this plugin's provider settings and enter your [FlashData API key](https://
 2. Select your FlashData credential in the **YouTube Search** node.
 3. Supply the Start input and run once. The example connects **Start → YouTube Search → End**.
 
+Enter only `query` in **Start**. Change the other settings in the tool node before running; the JSON below shows the combined configuration, not text to paste into Start.
+
+| Field | Where to set it | Example | Meaning |
+| --- | --- | --- | --- |
+| `query` | Start input | `Python tutorials` | Topic or search phrase. |
+| `max_results` | Tool node setting | `5` | Requested video count; the source limit and actual availability still apply. |
+| `filters_json` | Tool node setting | `{"upload_date":"this_week"}` | JSON object entered as text in the tool field; paste the inner object without the outer JSON string quotes. |
+
 Example input and tool settings:
 
 ```json
@@ -31,6 +39,12 @@ Example input and tool settings:
   "filters_json": "{\"upload_date\":\"this_week\"}"
 }
 ```
+
+## Use the output
+
+The tool emits `text` (a JSON string) and `json` (Dify's array of JSON messages). The imported workflow maps `json` to the End variable **results**. Take the first message object before reading the API fields below. For example, the full path from this workflow's End output is `results[0].results[0].results`.
+
+In a downstream node, select the tool's `json` output for structured processing, or its `text` output for a prompt. Check that the response contains the expected data before iterating. The examples below show the **API response object**, without Dify's outer message array.
 
 Read `results[0].results`. Keep `videoId`, `title`, channel information and available view counts. Build watch URLs as https://www.youtube.com/watch?v=<videoId>. Set `filters_json` for upload date, duration, sort order or features.
 

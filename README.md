@@ -1,6 +1,6 @@
 # Google Search & YouTube Tools
 
-**Looking for a dedicated plugin?** [Browse the 15 independent Google and YouTube plugins](plugins/README.md), each with its own package, provider identity, task guide and workflow. The bundle documented below remains available for existing workflows; it is one Marketplace entry, not 15 separate listings.
+**Looking for a dedicated plugin?** [Browse the 15 independent Google and YouTube plugins](https://github.com/flashdata-dev/dify-plugin-flashdata/blob/main/plugins/README.md), each with its own package, provider identity, task guide and workflow. The bundle documented below remains available for existing workflows; it is one Marketplace entry, not 15 separate listings.
 
 Search Google, monitor news, retrieve YouTube transcripts, inspect channels or deliver video and audio to your own storage from a Dify workflow. **FlashData provides 15 source tools with structured JSON output**, plus two tools for reading asynchronous jobs.
 
@@ -28,11 +28,13 @@ Start with the task you need below. Each source has a ready-to-import workflow a
 | [YouTube Autocomplete](https://flashdata.dev/docs/sources/youtube_suggestions?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_suggestions-workflow) — Explore YouTube search suggestions | `query` | `results[0]`, an array of strings |
 | [YouTube Download](https://flashdata.dev/docs/sources/youtube_download?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_download-workflow) — Deliver YouTube video or audio to your cloud storage | `video_id` | submission `id`, then `output.results[0]` from Get Job Results |
 
+The table uses paths inside the FlashData API response. Dify wraps that response in the tool's `json` message array: take its first object before reading these paths. The example End variable **results** is that array, so Google Search organic results are at `results[0].results[0].organic`. The tool also emits the API response as a JSON string in `text`.
+
 **Get Job** reads an existing job's status. **Get Job Results** retrieves its completed JSON result without submitting another query. Both accept the `job_id` from the download receipt.
 
 ## Install and connect
 
-1. Use Dify **1.17.1 or newer**. Open [Google Search & YouTube Tools by flashdata-dev](https://marketplace.dify.ai/plugin/flashdata-dev/flashdata) in Dify Marketplace and install it for your workspace. The current public bundle is **0.2.1**. For a single task, choose its [independent Marketplace plugin](plugins/README.md).
+1. Use Dify **1.17.1 or newer**. Open [Google Search & YouTube Tools by flashdata-dev](https://marketplace.dify.ai/plugin/flashdata-dev/flashdata) in Dify Marketplace and install it for your workspace. Select the latest approved version offered for your workspace. For a single task, choose its [independent Marketplace plugin](https://github.com/flashdata-dev/dify-plugin-flashdata/blob/main/plugins/README.md).
 2. Check the publisher is **flashdata-dev** and open the installed plugin's provider settings.
 3. [Create a FlashData API key](https://flashdata.dev/app/api-keys?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=plugin-setup), with access to the sources you intend to use. Open this plugin's provider settings and enter it. Validation uses the free API-access endpoint, not a paid query.
 4. For search and data tools, leave **Download storage JSON** empty. For media delivery, configure it as described below.
@@ -87,7 +89,7 @@ Every data query consumes FlashData Credits under current [pricing](https://flas
 
 Inputs are validated before submission. The plugin distinguishes rejected credentials (401), insufficient credits (402), source access (403) and rate limits (429), and never automatically retries paid POSTs. If a response is lost, check FlashData Jobs before submitting again. Result reads can be retried independently. Result JSON larger than 20 MiB must be retrieved outside this plugin.
 
-The four original tool IDs and their defaults are preserved for existing workflows. Version 0.2.0 adds eleven source tools, two job readers and optional storage credentials. Version 0.2.1 clarifies the plugin display name; tool behavior is unchanged. Batch submission is not part of this plugin. Community Edition checks, HTTP fixture tests, live API tests and Dify Cloud tests are recorded separately in the [validation notes](https://github.com/flashdata-dev/dify-plugin-flashdata/tree/main/docs); do not assume a workflow is validated on every model or deployment.
+The four original tool IDs and their defaults are preserved for existing workflows. Version 0.2.0 adds eleven source tools, two job readers and optional storage credentials. Version 0.2.1 clarifies the plugin display name. Version 0.2.2 updates Marketplace installation instructions and output guidance; tool behavior is unchanged. Batch submission is not part of this plugin. Community Edition checks, HTTP fixture tests, live API tests and Dify Cloud tests are recorded separately in the [validation notes](https://github.com/flashdata-dev/dify-plugin-flashdata/tree/main/docs); do not assume a workflow is validated on every model or deployment.
 
 ## Privacy, support and development
 
@@ -97,7 +99,7 @@ The four original tool IDs and their defaults are preserved for existing workflo
 uv venv --python 3.12
 uv pip install --python .venv/bin/python -r requirements.txt
 .venv/bin/python -m unittest discover -s tests -v
-dify plugin package . -o dist/flashdata-0.2.1.difypkg
+dify plugin package . -o dist/flashdata-0.2.2.difypkg
 ```
 
 Tests use HTTP fixtures and do not consume credits. Source schemas in `flashdata/sources.json` come from the shared FlashData source catalog; download semantics and storage credentials are validated separately. Package exclusions in `.difyignore` keep credentials, tests, examples and development files out of the runtime package. Public workflow examples remain available in this repository.

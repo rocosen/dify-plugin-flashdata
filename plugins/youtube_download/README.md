@@ -1,6 +1,6 @@
 # YouTube Download
 
-Submit an asynchronous video or audio download to your configured customer storage. Returns a job ID. Use Get Job, then Get Job Results to read the upload manifest. Billed by delivered bytes under current FlashData pricing.
+Deliver YouTube video or audio to your own S3 or other supported cloud storage. Submit a download once, save its job ID, then use Get Job and Get Job Results to read progress and the upload manifest. FlashData bills by delivered bytes; customer storage is required.
 
 Use this dedicated **YouTube Download** plugin in a Dify workflow or tool-capable agent. Powered by **FlashData**; API queries use paid credits. No separate Google or YouTube API key is required.
 
@@ -34,6 +34,15 @@ JSON results expire after 24 hours; media retention follows your storage setting
 2. Select your FlashData credential in the **YouTube Download** node.
 3. Supply the Start input and run once. The example connects **Start → YouTube Download → End**.
 
+Enter only `video_id` in **Start**. Change the other settings in the tool node before running; the JSON below shows the combined configuration, not text to paste into Start.
+
+| Field | Where to set it | Example | Meaning |
+| --- | --- | --- | --- |
+| `video_id` | Start input | `dQw4w9WgXcQ` | YouTube video ID or supported YouTube video URL. |
+| `download_type` | Tool node setting | `audio_video` | audio_video delivers video with audio; audio requests audio only. |
+| `video_quality` | Tool node setting | `<=720` | Upper bound for requested video quality. |
+| `upload_metadata` | Tool node setting | `false` | Whether to upload accompanying metadata to your storage. |
+
 Example input and tool settings:
 
 ```json
@@ -44,6 +53,16 @@ Example input and tool settings:
   "upload_metadata": false
 }
 ```
+
+## Read progress and use the delivered file
+
+The Download tool emits `text` (a JSON string) and `json` (Dify's array of JSON messages). Its example maps `json` to the End variable **receipt**. Save `receipt[0].id` as the job ID.
+
+1. Import the **Get Job** workflow linked above, select this plugin's credential and enter that ID in Start's `job_id` field. Its End variable is `results`; inspect the first message object for job status. Repeat this read while pending or processing.
+2. Once completed, import **Get Job Results**, select the credential and enter the same `job_id`. Its End variable **results** contains the JSON message array. The full path to the upload manifest is `results[0].output.results[0]`.
+3. Pass the manifest's `file_url` to a step that can access your storage, or retain `file_size`, `downloaded_bytes`, `md5` and `output_format` in a delivery record when present. A private URL needs storage authorization.
+
+Do not rerun Download to check progress: that submits another paid job. The paths in the following paragraph refer to the API object inside the first JSON message.
 
 Read submission `id`, then `output.results[0]` from Get Job Results. Configure customer storage in provider credentials, submit once and retain the job ID. Read status until completed, then inspect `file_url`, `file_size`, `downloaded_bytes`, `md5` and `output_format`. A private storage URL still requires your storage access.
 

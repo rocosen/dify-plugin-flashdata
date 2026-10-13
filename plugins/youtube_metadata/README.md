@@ -1,6 +1,6 @@
 # YouTube Video Metadata
 
-Read a video title, description, channel, available statistics, chapters and format metadata. Accepts a video ID or YouTube video URL.
+Enrich a video record with its title, description, channel, available statistics and YouTube video chapters. Accepts a video ID or YouTube video URL. Request chapters for a navigation outline; leave format metadata off when it is unnecessary.
 
 Use this dedicated **YouTube Video Metadata** plugin in a Dify workflow or tool-capable agent. Powered by **FlashData**; API queries use paid credits. No separate Google or YouTube API key is required.
 
@@ -22,6 +22,14 @@ Open this plugin's provider settings and enter your [FlashData API key](https://
 2. Select your FlashData credential in the **YouTube Video Metadata** node.
 3. Supply the Start input and run once. The example connects **Start → YouTube Video Metadata → End**.
 
+Enter only `video_id` in **Start**. Change the other settings in the tool node before running; the JSON below shows the combined configuration, not text to paste into Start.
+
+| Field | Where to set it | Example | Meaning |
+| --- | --- | --- | --- |
+| `video_id` | Start input | `dQw4w9WgXcQ` | YouTube video ID or supported YouTube video URL. |
+| `include_chapters` | Tool node setting | `true` | Include chapters when available. |
+| `include_formats` | Tool node setting | `false` | Include format metadata; disabled in this example. |
+
 Example input and tool settings:
 
 ```json
@@ -31,6 +39,12 @@ Example input and tool settings:
   "include_formats": false
 }
 ```
+
+## Use the output
+
+The tool emits `text` (a JSON string) and `json` (Dify's array of JSON messages). The imported workflow maps `json` to the End variable **results**. Take the first message object before reading the API fields below. For example, the full path from this workflow's End output is `results[0].results[0]`.
+
+In a downstream node, select the tool's `json` output for structured processing, or its `text` output for a prompt. Check that the response contains the expected data before iterating. The examples below show the **API response object**, without Dify's outer message array.
 
 Read `results[0]`. Read the title, description, channel and available statistics. Chapters and formats are optional; use `include_formats=false` when only inspecting a title or chapter list.
 

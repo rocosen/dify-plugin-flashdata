@@ -1,6 +1,6 @@
 # YouTube Extended Search
 
-Run a larger YouTube search with the same filter options and a 1–700 requested-result limit. This is a separate FlashData source with its own price; the limit is not a guaranteed result count.
+Collect a larger set of YouTube search results for a topic survey or video research table. Extended Search supports the same filters as standard search and accepts 1–700 requested results. It has a separate FlashData price; the limit is not a guaranteed result count.
 
 Use this dedicated **YouTube Extended Search** plugin in a Dify workflow or tool-capable agent. Powered by **FlashData**; API queries use paid credits. No separate Google or YouTube API key is required.
 
@@ -22,6 +22,14 @@ Open this plugin's provider settings and enter your [FlashData API key](https://
 2. Select your FlashData credential in the **YouTube Extended Search** node.
 3. Supply the Start input and run once. The example connects **Start → YouTube Extended Search → End**.
 
+Enter only `query` in **Start**. Change the other settings in the tool node before running; the JSON below shows the combined configuration, not text to paste into Start.
+
+| Field | Where to set it | Example | Meaning |
+| --- | --- | --- | --- |
+| `query` | Start input | `Dify workflows` | Topic or search phrase. |
+| `max_results` | Tool node setting | `100` | Requested video count; the source limit and actual availability still apply. |
+| `filters_json` | Tool node setting | `{"type":"video"}` | JSON object entered as text in the tool field; paste the inner object without the outer JSON string quotes. |
+
 Example input and tool settings:
 
 ```json
@@ -31,6 +39,12 @@ Example input and tool settings:
   "filters_json": "{\"type\":\"video\"}"
 }
 ```
+
+## Use the output
+
+The tool emits `text` (a JSON string) and `json` (Dify's array of JSON messages). The imported workflow maps `json` to the End variable **results**. Take the first message object before reading the API fields below. For example, the full path from this workflow's End output is `results[0].results[0].results`.
+
+In a downstream node, select the tool's `json` output for structured processing, or its `text` output for a prompt. Check that the response contains the expected data before iterating. The examples below show the **API response object**, without Dify's outer message array.
 
 Read `results[0].results`. Export one row per returned video and deduplicate by `videoId`. This source accepts up to 700 requested results and has a separate price from standard search; the actual count can be lower.
 

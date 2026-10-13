@@ -1,6 +1,6 @@
 app:
   description: Uses the independent YouTube Channel Data plugin (flashdata-dev/youtube_channel
-    0.1.0). Configure its provider credential before running.
+    0.1.1). Configure its provider credential before running.
   icon: 🤖
   icon_background: '#FFEAD5'
   mode: workflow

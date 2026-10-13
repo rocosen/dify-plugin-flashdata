@@ -1,0 +1,257 @@
+{
+  "date": "2026-10-13",
+  "tests": {
+    "passed": 30,
+    "scope": "Existing unit, SDK and HTTP fixture tests; no billable queries"
+  },
+  "static_docs": "15 task guides: JSON, Marketplace URLs, deep links, fees, workflow input/output mapping checked",
+  "packages": [
+    {
+      "source": "google_search",
+      "name": "google_search",
+      "version": "0.1.1",
+      "package": "google_search-0.1.1.difypkg",
+      "bytes": 15328,
+      "sha256": "0714e9d4fc0ad5c16f377466f80b8ef1cadeb045068cd44e260ee262e7eb8ba8",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "google_news",
+      "name": "google_news",
+      "version": "0.1.1",
+      "package": "google_news-0.1.1.difypkg",
+      "bytes": 15390,
+      "sha256": "80eb2cda445c3302b8aeea8208b9d7318532506929884b75b8ec685c30c5fdd7",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "google_images",
+      "name": "google_images",
+      "version": "0.1.1",
+      "package": "google_images-0.1.1.difypkg",
+      "bytes": 15348,
+      "sha256": "bb6c3873b6b1eb0605eaf1aadad391c9e57caa358a01bc69e004ae53c3247ba0",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "google_shopping",
+      "name": "google_shopping",
+      "version": "0.1.1",
+      "package": "google_shopping-0.1.1.difypkg",
+      "bytes": 15340,
+      "sha256": "67a9f358b2e4354f01aad7cfbaded76024a6a8cff7b72e86da30534db40a6c71",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "google_videos",
+      "name": "google_videos",
+      "version": "0.1.1",
+      "package": "google_videos-0.1.1.difypkg",
+      "bytes": 15280,
+      "sha256": "03f2d52b294e92b733c870964a312311309af905f8205cf4f14f59e433b1ff91",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "google_places",
+      "name": "google_places",
+      "version": "0.1.1",
+      "package": "google_places-0.1.1.difypkg",
+      "bytes": 15350,
+      "sha256": "c59445e894c8d30e2fa010e8826d0dc237d756bef3466918fedd979e2b789fae",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "youtube_search",
+      "name": "youtube_search",
+      "version": "0.1.1",
+      "package": "youtube_search-0.1.1.difypkg",
+      "bytes": 15468,
+      "sha256": "2bee18af3da5d222d50c0b41b2916b4fbb7e3514f0f88b277539aaceb7822964",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "youtube_search_extended",
+      "name": "youtube_search_extended",
+      "version": "0.1.1",
+      "package": "youtube_search_extended-0.1.1.difypkg",
+      "bytes": 15599,
+      "sha256": "0e015d8367991925b92fb0265c8bd583830c8bcc5d6f30812b1dca7ede715af7",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "youtube_metadata",
+      "name": "youtube_metadata",
+      "version": "0.1.1",
+      "package": "youtube_metadata-0.1.1.difypkg",
+      "bytes": 14875,
+      "sha256": "9d7af10c57a163ac4adfe052ae7948806d6852f91f1095cace558136924ae13b",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "youtube_transcript",
+      "name": "youtube_transcript",
+      "version": "0.1.1",
+      "package": "youtube_transcript-0.1.1.difypkg",
+      "bytes": 15127,
+      "sha256": "1608914d55c32692102355b3cfcd03591d9a30f3052f2981393798d91009498b",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "youtube_captions",
+      "name": "youtube_captions",
+      "version": "0.1.1",
+      "package": "youtube_captions-0.1.1.difypkg",
+      "bytes": 15101,
+      "sha256": "c2bda2595cb50e20f4d9b4514ccf5d290ed6b835c76a072240e9540c672444bb",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "youtube_trainability",
+      "name": "youtube_trainability",
+      "version": "0.1.1",
+      "package": "youtube_trainability-0.1.1.difypkg",
+      "bytes": 14699,
+      "sha256": "3baef07c72d8a28853ac2e95d34c38e007af9e0ed472b468afd88dad3dc610ed",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "youtube_channel",
+      "name": "youtube_channel",
+      "version": "0.1.1",
+      "package": "youtube_channel-0.1.1.difypkg",
+      "bytes": 14846,
+      "sha256": "5f0916a5b19689135657c7d26faa030d145d30cc873eb484d00816c33ed8bfec",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "youtube_suggestions",
+      "name": "youtube_suggestions",
+      "version": "0.1.1",
+      "package": "youtube_suggestions-0.1.1.difypkg",
+      "bytes": 14903,
+      "sha256": "37a7cec8f78c012732027cffb3c1dacd8ff59e83329c658029207c112b7f5b13",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "youtube_download",
+      "name": "youtube_download",
+      "version": "0.1.1",
+      "package": "youtube_download-0.1.1.difypkg",
+      "bytes": 18797,
+      "sha256": "0de67b756738bf57f2a98e0f8cd912b3928c0dd2e7a8cf2858bb9b6fb8f526c7",
+      "release_tag": "task-plugins-v0.1.1",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    },
+    {
+      "source": "flashdata",
+      "name": "flashdata",
+      "version": "0.2.2",
+      "package": "flashdata-0.2.2.difypkg",
+      "sha256": "d80b2a6345407bbc0b6b2bc2d2d303a1cf850e0691fb10a34153b33dd49b895a",
+      "bytes": 37230,
+      "release_tag": "v0.2.2",
+      "runtime_comparison": "byte-identical runtime/tools/source schema against previous release package"
+    }
+  ],
+  "toolkit": [
+    {
+      "source": "google_search",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/google_search\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:70: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "google_news",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/google_news\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:73: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "google_images",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/google_images\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:71: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "google_shopping",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/google_shopping\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:49: Read `results[0].shopping`. Compare `title`, `productId`, merchant `source`, `price` and `link`. Keep variants and currencies separate; an offer snapshot does not guarantee invento\n  - payment processing: README.md:72: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "google_videos",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/google_videos\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:70: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "google_places",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/google_places\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:71: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "youtube_search",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/youtube_search\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:70: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "youtube_search_extended",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/youtube_search_extended\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:70: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "youtube_metadata",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/youtube_metadata\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:66: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "youtube_transcript",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/youtube_transcript\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:72: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "youtube_captions",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/youtube_captions\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:74: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "youtube_trainability",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/youtube_trainability\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:51: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "youtube_channel",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/youtube_channel\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:68: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "youtube_suggestions",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/youtube_suggestions\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:66: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "youtube_download",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/youtube_download\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: README.md:71: The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    },
+    {
+      "source": "flashdata",
+      "exit_code": 0,
+      "summary": "## Local DIFYPKG Validation Summary\n\n- Report directory: /private/tmp/dify-content-20261013/validation/flashdata\n- Blocking failures: 0\n- Warning categories: 3\n- Environment/check execution failures: 0\n\n| Check | Type | Status | Findings |\n|---|---|---|---|\n| `package_contents` | blocking | PASS | No findings. |\n| `package_secrets` | blocking | PASS | No findings. |\n| `package_binaries` | blocking | PASS | No findings. |\n| `manifest_metadata` | blocking | PASS | No findings. |\n| `readme_metadata` | blocking | PASS | No findings. |\n| `package_dependencies` | blocking | PASS | No findings. |\n| `python_compile` | blocking | PASS | No findings. |\n| `python_safety` | warning | PASS | No findings. |\n| `prohibited_financial_activity` | warning | PASS | strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers |\n| `access_domains` | warning | PASS | detected 2 outbound domain(s) by static scan: |\n| `dependency_vulnerabilities` | warning | PASS | dependency source: requirements.txt (3 pinned, 0 unpinned) |\n| `sensitive_capabilities` | blocking | PASS | No findings. |\n\n### Skipped checks\n- PR title/body language and template checks require GitHub PR metadata\n- Marketplace duplicate-version check requires Marketplace/PR workflow context\n- plugin install and upload-package tests are not run by this local validator\n\n### Warnings for review\n- prohibited_financial_activity:\n  - strong manual review required: official Dify Marketplace guidelines prohibit financial transactions, including payments, asset transfers, and token transfers\n  - payment processing: flashdata/client.py:42: \"The query outcome is unknown and may already be charged. \"\n- access_domains:\n  - detected 2 outbound domain(s) by static scan:\n  -   api.flashdata.dev [domain] (flashdata/client.py:8, flashdata/client.py:11)\n  -   data.flashdata.dev [domain] (flashdata/client.py:9, flashdata/client.py:10)\n- dependency_vulnerabilities:\n  - dependency source: requirements.txt (3 pinned, 0 unpinned)\n  - no known vulnerabilities in the pinned dependency set\n"
+    }
+  ],
+  "new_version_ce_install": false,
+  "cloud": false,
+  "real_llm_agent": false,
+  "new_paid_queries": 0,
+  "storage_writes": 0
+}

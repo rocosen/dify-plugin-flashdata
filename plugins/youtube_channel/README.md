@@ -1,6 +1,6 @@
 # YouTube Channel Data
 
-Retrieve a YouTube channel profile and recent videos using its handle. Request 1–100 videos; returned fields and count depend on upstream availability.
+Retrieve a YouTube channel profile and recent uploads from an @handle. Build a channel comparison or recent-video list with returned video IDs. Request 1–100 videos; available fields and the actual count vary. This is not a complete channel archive.
 
 Use this dedicated **YouTube Channel Data** plugin in a Dify workflow or tool-capable agent. Powered by **FlashData**; API queries use paid credits. No separate Google or YouTube API key is required.
 
@@ -22,6 +22,13 @@ Open this plugin's provider settings and enter your [FlashData API key](https://
 2. Select your FlashData credential in the **YouTube Channel Data** node.
 3. Supply the Start input and run once. The example connects **Start → YouTube Channel Data → End**.
 
+Enter only `handle` in **Start**. Change the other settings in the tool node before running; the JSON below shows the combined configuration, not text to paste into Start.
+
+| Field | Where to set it | Example | Meaning |
+| --- | --- | --- | --- |
+| `handle` | Start input | `@GoogleDevelopers` | Channel handle, including the @ prefix. |
+| `video_limit` | Tool node setting | `10` | Requested number of recent channel videos. |
+
 Example input and tool settings:
 
 ```json
@@ -30,6 +37,12 @@ Example input and tool settings:
   "video_limit": 10
 }
 ```
+
+## Use the output
+
+The tool emits `text` (a JSON string) and `json` (Dify's array of JSON messages). The imported workflow maps `json` to the End variable **results**. Take the first message object before reading the API fields below. For example, the full path from this workflow's End output is `results[0].results[0].videos`.
+
+In a downstream node, select the tool's `json` output for structured processing, or its `text` output for a prompt. Check that the response contains the expected data before iterating. The examples below show the **API response object**, without Dify's outer message array.
 
 Read `results[0]` and its `videos[]`. Start from an @handle. Read channel identity and available subscriber information, then export recent videos with IDs, titles and durations. This is a recent-video snapshot, not a full channel archive.
 

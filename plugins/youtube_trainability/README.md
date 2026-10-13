@@ -1,6 +1,6 @@
 # YouTube License Metadata
 
-Read the Creative Commons license classification exposed by the video metadata. The API source is youtube_trainability; this does not read creator training settings or grant training permission.
+Read the Creative Commons license classification exposed by YouTube video metadata and keep it alongside a research record. The API source is youtube_trainability. It does not read creator third-party training settings or grant training or reuse permission.
 
 Use this dedicated **YouTube License Metadata** plugin in a Dify workflow or tool-capable agent. Powered by **FlashData**; API queries use paid credits. No separate Google or YouTube API key is required.
 
@@ -22,6 +22,12 @@ Open this plugin's provider settings and enter your [FlashData API key](https://
 2. Select your FlashData credential in the **YouTube License Metadata** node.
 3. Supply the Start input and run once. The example connects **Start → YouTube License Metadata → End**.
 
+Enter `video_id` in **Start**.
+
+| Field | Where to set it | Example | Meaning |
+| --- | --- | --- | --- |
+| `video_id` | Start input | `dQw4w9WgXcQ` | YouTube video ID or supported YouTube video URL. |
+
 Example input and tool settings:
 
 ```json
@@ -29,6 +35,12 @@ Example input and tool settings:
   "video_id": "dQw4w9WgXcQ"
 }
 ```
+
+## Use the output
+
+The tool emits `text` (a JSON string) and `json` (Dify's array of JSON messages). The imported workflow maps `json` to the End variable **results**. Take the first message object before reading the API fields below. For example, the full path from this workflow's End output is `results[0].results[0]`.
+
+In a downstream node, select the tool's `json` output for structured processing, or its `text` output for a prompt. Check that the response contains the expected data before iterating. The examples below show the **API response object**, without Dify's outer message array.
 
 Read `results[0]` license classification. Use the returned Creative Commons license metadata as an attribute in your video records. It does not expose creator third-party training settings and does not grant permission to train on a video.
 
