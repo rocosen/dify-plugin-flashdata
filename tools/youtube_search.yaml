@@ -5,34 +5,47 @@ identity:
     en_US: YouTube Search
 description:
   human:
-    en_US: Find YouTube videos by keywords and return video IDs and available titles,
-      channels and metadata.
-  llm: Find YouTube videos by keywords and return video IDs and available titles,
-    channels and metadata.
+    en_US: Find YouTube videos for a topic, with optional upload-date, duration, type,
+      feature and sort filters. Request 1–20 results; actual results may be fewer.
+  llm: Find YouTube videos for a topic, with optional upload-date, duration, type,
+    feature and sort filters. Request 1–20 results; actual results may be fewer.
 parameters:
 - name: query
   type: string
   required: true
   label:
-    en_US: Search query
+    en_US: Query
   human_description:
-    en_US: Search terms, between 1 and 2,000 characters. Do not include secrets or
-      unnecessary personal data.
-  llm_description: Search terms, between 1 and 2,000 characters. Do not include secrets
-    or unnecessary personal data.
+    en_US: Search terms or a query prefix, 1–2,000 characters.
+  llm_description: Search terms or a query prefix, 1–2,000 characters.
   form: llm
 - name: max_results
   type: number
   required: false
   label:
-    en_US: Result count
+    en_US: Max results
   human_description:
-    en_US: Maximum videos to return, 1-20.
-  llm_description: Maximum videos to return, 1-20.
+    en_US: Request 1–20 results. Actual results may be fewer.
+  llm_description: Request 1–20 results. Actual results may be fewer.
   form: llm
   default: 10
-  min: 1
-  max: 20
+- name: filters_json
+  type: string
+  required: false
+  label:
+    en_US: Filters
+  human_description:
+    en_US: 'Optional JSON object, e.g. {"upload_date":"this_week","sort_by":"upload_date","subtitles":true}.
+      Supported enum fields: duration (<4, 4-20, >20), sort_by (rating, relevance,
+      view_count, upload_date), type (video, channel, playlist, movie), upload_date
+      (today, last_hour, this_week, this_month, this_year). Boolean features: 360,
+      3d, 4k, creative_commons, hd, hdr, live, location, purchased, subtitles, vr180.'
+  llm_description: 'Optional JSON object, e.g. {"upload_date":"this_week","sort_by":"upload_date","subtitles":true}.
+    Supported enum fields: duration (<4, 4-20, >20), sort_by (rating, relevance, view_count,
+    upload_date), type (video, channel, playlist, movie), upload_date (today, last_hour,
+    this_week, this_month, this_year). Boolean features: 360, 3d, 4k, creative_commons,
+    hd, hdr, live, location, purchased, subtitles, vr180.'
+  form: llm
 extra:
   python:
     source: tools/youtube_search.py

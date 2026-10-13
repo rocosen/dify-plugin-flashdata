@@ -2,9 +2,10 @@ identity:
   author: flashdata-dev
   name: flashdata
   label:
-    en_US: FlashData
+    en_US: Google & YouTube Data by FlashData
   description:
-    en_US: Google Search and YouTube data for research workflows and agents.
+    en_US: Google web, news, image, shopping, video and places search; YouTube transcripts,
+      captions, channel data, autocomplete, metadata, license labels and downloads.
   icon: icon.svg
   tags:
   - search
@@ -18,12 +19,36 @@ credentials_for_provider:
     help:
       en_US: Create a FlashData account and API key. Validation does not run a paid
         query.
-    url: https://flashdata.dev
+    url: https://flashdata.dev?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=provider-setup
+  download_storage:
+    type: secret-input
+    required: false
+    label:
+      en_US: Download storage JSON (optional)
+    help:
+      en_US: Only needed for YouTube Download. Paste your customer storage JSON here;
+        it is kept in provider credentials and is not exposed as an agent tool argument.
+        Includes storage_type, storage_url and provider credentials. Leave empty for
+        data-only tools.
+    url: https://flashdata.dev/docs/sources/youtube_download?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube-download-setup
 tools:
 - tools/google_search.yaml
+- tools/google_images.yaml
+- tools/google_news.yaml
+- tools/google_shopping.yaml
+- tools/google_videos.yaml
+- tools/google_places.yaml
 - tools/youtube_search.yaml
+- tools/youtube_search_extended.yaml
 - tools/youtube_metadata.yaml
 - tools/youtube_transcript.yaml
+- tools/youtube_captions.yaml
+- tools/youtube_trainability.yaml
+- tools/youtube_channel.yaml
+- tools/youtube_suggestions.yaml
+- tools/youtube_download.yaml
+- tools/get_job.yaml
+- tools/get_job_results.yaml
 extra:
   python:
     source: provider/flashdata.py

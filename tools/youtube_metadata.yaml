@@ -5,41 +5,40 @@ identity:
     en_US: YouTube Video Metadata
 description:
   human:
-    en_US: Get a YouTube video title, channel, description, statistics and optional
-      chapters or format metadata. This tool does not download media.
-  llm: Get a YouTube video title, channel, description, statistics and optional chapters
-    or format metadata. This tool does not download media.
+    en_US: Read a video title, description, channel, available statistics, chapters
+      and format metadata. Accepts a video ID or YouTube video URL.
+  llm: Read a video title, description, channel, available statistics, chapters and
+    format metadata. Accepts a video ID or YouTube video URL.
 parameters:
 - name: video_id
   type: string
   required: true
   label:
-    en_US: YouTube video
+    en_US: Video id
   human_description:
-    en_US: An 11-character video ID or a youtube.com / youtu.be video URL. The URL
-      is parsed locally; only the video ID is sent to FlashData.
-  llm_description: An 11-character video ID or a youtube.com / youtu.be video URL.
-    The URL is parsed locally; only the video ID is sent to FlashData.
+    en_US: An 11-character video ID or youtube.com / youtu.be video URL; parsed locally
+      to an ID.
+  llm_description: An 11-character video ID or youtube.com / youtu.be video URL; parsed
+    locally to an ID.
   form: llm
+- name: include_formats
+  type: boolean
+  required: false
+  label:
+    en_US: Include formats
+  human_description:
+    en_US: Include available format metadata; this does not download the media.
+  llm_description: Include available format metadata; this does not download the media.
+  form: llm
+  default: true
 - name: include_chapters
   type: boolean
   required: false
   label:
     en_US: Include chapters
   human_description:
-    en_US: Include available video chapters.
-  llm_description: Include available video chapters.
-  form: llm
-  default: true
-- name: include_formats
-  type: boolean
-  required: false
-  label:
-    en_US: Include format metadata
-  human_description:
-    en_US: Include available media format metadata; this does not download media.
-  llm_description: Include available media format metadata; this does not download
-    media.
+    en_US: Include chapters when available.
+  llm_description: Include chapters when available.
   form: llm
   default: true
 extra:

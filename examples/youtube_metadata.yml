@@ -1,10 +1,11 @@
 app:
-  description: One FlashData tool call. Requires the FlashData plugin and a provider
-    credential.
+  description: Read a video title, description, channel, available statistics, chapters
+    and format metadata. Accepts a video ID or YouTube video URL. Requires FlashData
+    0.2.0 and your provider credential.
   icon: 🤖
   icon_background: '#FFEAD5'
   mode: workflow
-  name: FlashData Youtube Metadata
+  name: Read YouTube metadata and chapters — FlashData
   use_icon_as_answer_icon: false
 dependencies: []
 kind: app
@@ -88,11 +89,11 @@ workflow:
         title: Start
         type: start
         variables:
-        - label: video_id
+        - label: Video Id
           variable: video_id
           type: text-input
           required: true
-          max_length: 2000
+          max_length: 200
           options: []
       height: 90
       id: start
@@ -109,13 +110,14 @@ workflow:
       width: 244
     - data:
         type: tool
-        title: Youtube Metadata
-        desc: One real-time FlashData request. Automatic retries disabled.
+        title: YouTube Video Metadata
+        desc: Read a video title, description, channel, available statistics, chapters
+          and format metadata. Accepts a video ID or YouTube video URL.
         provider_id: flashdata-dev/flashdata/flashdata
         provider_name: flashdata-dev/flashdata/flashdata
         provider_type: builtin
         tool_name: youtube_metadata
-        tool_label: Youtube Metadata
+        tool_label: YouTube Video Metadata
         tool_configurations: {}
         tool_node_version: '2'
         tool_parameters:

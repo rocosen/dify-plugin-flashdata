@@ -1,0 +1,131 @@
+identity:
+  name: youtube_download
+  author: flashdata-dev
+  label:
+    en_US: YouTube Download
+description:
+  human:
+    en_US: Submit an asynchronous video or audio download to your configured customer
+      storage. Returns a job ID. Use Get Job, then Get Job Results to read the upload
+      manifest. Billed by delivered bytes under current FlashData pricing.
+  llm: Submit an asynchronous video or audio download to your configured customer
+    storage. Returns a job ID. Use Get Job, then Get Job Results to read the upload
+    manifest. Billed by delivered bytes under current FlashData pricing.
+parameters:
+- name: video_id
+  type: string
+  required: true
+  label:
+    en_US: Video id
+  human_description:
+    en_US: An 11-character video ID or youtube.com / youtu.be video URL; parsed locally
+      to an ID.
+  llm_description: An 11-character video ID or youtube.com / youtu.be video URL; parsed
+    locally to an ID.
+  form: llm
+- name: download_type
+  type: string
+  required: false
+  label:
+    en_US: Download type
+  human_description:
+    en_US: audio_video combines video and audio; video selects video only; audio selects
+      audio only.
+  llm_description: audio_video combines video and audio; video selects video only;
+    audio selects audio only.
+  form: llm
+  default: audio_video
+- name: video_quality
+  type: string
+  required: false
+  label:
+    en_US: Video quality
+  human_description:
+    en_US: Video resolution constraint such as <=720, ==1080, >=480, best or worst.
+      Omit for audio-only downloads. API default is <=720.
+  llm_description: Video resolution constraint such as <=720, ==1080, >=480, best
+    or worst. Omit for audio-only downloads. API default is <=720.
+  form: llm
+- name: fps
+  type: string
+  required: false
+  label:
+    en_US: Fps
+  human_description:
+    en_US: 'Optional frame-rate constraint: <=, >= or == followed by 1–240. Omit for
+      audio-only downloads.'
+  llm_description: 'Optional frame-rate constraint: <=, >= or == followed by 1–240.
+    Omit for audio-only downloads.'
+  form: llm
+- name: audio_language
+  type: string
+  required: false
+  label:
+    en_US: Audio language
+  human_description:
+    en_US: default or original audio track. Omit for video-only downloads.
+  llm_description: default or original audio track. Omit for video-only downloads.
+  form: llm
+- name: audio_quality
+  type: string
+  required: false
+  label:
+    en_US: Audio quality
+  human_description:
+    en_US: Audio-only bitrate (320, 256, 192 or 128) or best. Omit for other download
+      types.
+  llm_description: Audio-only bitrate (320, 256, 192 or 128) or best. Omit for other
+    download types.
+  form: llm
+- name: yt_dlp_format
+  type: string
+  required: false
+  label:
+    en_US: Yt dlp format
+  human_description:
+    en_US: Optional advanced format selector (up to 1,024 characters). Overrides video_quality,
+      fps and audio_language selection.
+  llm_description: Optional advanced format selector (up to 1,024 characters). Overrides
+    video_quality, fps and audio_language selection.
+  form: llm
+- name: upload_metadata
+  type: boolean
+  required: false
+  label:
+    en_US: Upload metadata
+  human_description:
+    en_US: Upload metadata alongside media to customer storage; default false.
+  llm_description: Upload metadata alongside media to customer storage; default false.
+  form: llm
+- name: output_format
+  type: string
+  required: false
+  label:
+    en_US: Output format
+  human_description:
+    en_US: mp4, webm or mkv for video; m4a, mp3 or opus for audio. Omit for the type-specific
+      default (mp4 or m4a).
+  llm_description: mp4, webm or mkv for video; m4a, mp3 or opus for audio. Omit for
+    the type-specific default (mp4 or m4a).
+  form: llm
+- name: start_at
+  type: string
+  required: false
+  label:
+    en_US: Start at
+  human_description:
+    en_US: Optional clip start in HH:MM:SS, at most 12:00:00.
+  llm_description: Optional clip start in HH:MM:SS, at most 12:00:00.
+  form: llm
+- name: end_at
+  type: string
+  required: false
+  label:
+    en_US: End at
+  human_description:
+    en_US: Optional clip end in HH:MM:SS, after start_at and at most 12:00:00.
+  llm_description: Optional clip end in HH:MM:SS, after start_at and at most 12:00:00.
+  form: llm
+extra:
+  python:
+    source: tools/youtube_download.py

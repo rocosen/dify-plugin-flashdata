@@ -1,0 +1,53 @@
+identity:
+  name: youtube_search_extended
+  author: flashdata-dev
+  label:
+    en_US: YouTube Extended Search
+description:
+  human:
+    en_US: Run a larger YouTube search with the same filter options and a 1–700 requested-result
+      limit. This is a separate FlashData source with its own price; the limit is
+      not a guaranteed result count.
+  llm: Run a larger YouTube search with the same filter options and a 1–700 requested-result
+    limit. This is a separate FlashData source with its own price; the limit is not
+    a guaranteed result count.
+parameters:
+- name: query
+  type: string
+  required: true
+  label:
+    en_US: Query
+  human_description:
+    en_US: Search terms or a query prefix, 1–2,000 characters.
+  llm_description: Search terms or a query prefix, 1–2,000 characters.
+  form: llm
+- name: max_results
+  type: number
+  required: false
+  label:
+    en_US: Max results
+  human_description:
+    en_US: Request 1–700 results. Actual results may be fewer.
+  llm_description: Request 1–700 results. Actual results may be fewer.
+  form: llm
+  default: 20
+- name: filters_json
+  type: string
+  required: false
+  label:
+    en_US: Filters
+  human_description:
+    en_US: 'Optional JSON object, e.g. {"upload_date":"this_week","sort_by":"upload_date","subtitles":true}.
+      Supported enum fields: duration (<4, 4-20, >20), sort_by (rating, relevance,
+      view_count, upload_date), type (video, channel, playlist, movie), upload_date
+      (today, last_hour, this_week, this_month, this_year). Boolean features: 360,
+      3d, 4k, creative_commons, hd, hdr, live, location, purchased, subtitles, vr180.'
+  llm_description: 'Optional JSON object, e.g. {"upload_date":"this_week","sort_by":"upload_date","subtitles":true}.
+    Supported enum fields: duration (<4, 4-20, >20), sort_by (rating, relevance, view_count,
+    upload_date), type (video, channel, playlist, movie), upload_date (today, last_hour,
+    this_week, this_month, this_year). Boolean features: 360, 3d, 4k, creative_commons,
+    hd, hdr, live, location, purchased, subtitles, vr180.'
+  form: llm
+extra:
+  python:
+    source: tools/youtube_search_extended.py

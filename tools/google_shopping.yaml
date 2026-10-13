@@ -1,0 +1,91 @@
+identity:
+  name: google_shopping
+  author: flashdata-dev
+  label:
+    en_US: Google Shopping
+description:
+  human:
+    en_US: Search product listings with available prices, merchants and links. Capture
+      a comparison snapshot; prices and availability can change.
+  llm: Search product listings with available prices, merchants and links. Capture
+    a comparison snapshot; prices and availability can change.
+parameters:
+- name: query
+  type: string
+  required: true
+  label:
+    en_US: Query
+  human_description:
+    en_US: Search terms or a query prefix, 1–2,000 characters.
+  llm_description: Search terms or a query prefix, 1–2,000 characters.
+  form: llm
+- name: gl
+  type: string
+  required: false
+  label:
+    en_US: Gl
+  human_description:
+    en_US: Two-letter country code, such as us or gb. Omit to use the search provider
+      behavior.
+  llm_description: Two-letter country code, such as us or gb. Omit to use the search
+    provider behavior.
+  form: llm
+- name: hl
+  type: string
+  required: false
+  label:
+    en_US: Hl
+  human_description:
+    en_US: Interface language, such as en or zh-CN. Omit to use the search provider
+      behavior.
+  llm_description: Interface language, such as en or zh-CN. Omit to use the search
+    provider behavior.
+  form: llm
+- name: location
+  type: string
+  required: false
+  label:
+    en_US: Location
+  human_description:
+    en_US: Optional broad search location, such as London; up to 200 characters.
+  llm_description: Optional broad search location, such as London; up to 200 characters.
+  form: llm
+- name: num
+  type: number
+  required: false
+  label:
+    en_US: Num
+  human_description:
+    en_US: Requested results per page, 1–100. The actual count may be lower.
+  llm_description: Requested results per page, 1–100. The actual count may be lower.
+  form: llm
+- name: page
+  type: number
+  required: false
+  label:
+    en_US: Page
+  human_description:
+    en_US: Page number, 1–100. Each page is a separate query.
+  llm_description: Page number, 1–100. Each page is a separate query.
+  form: llm
+- name: tbs
+  type: string
+  required: false
+  label:
+    en_US: Tbs
+  human_description:
+    en_US: Google time filter, such as qdr:w for the past week.
+  llm_description: Google time filter, such as qdr:w for the past week.
+  form: llm
+- name: autocorrect
+  type: boolean
+  required: false
+  label:
+    en_US: Autocorrect
+  human_description:
+    en_US: Whether Google may autocorrect the search terms.
+  llm_description: Whether Google may autocorrect the search terms.
+  form: llm
+extra:
+  python:
+    source: tools/google_shopping.py
