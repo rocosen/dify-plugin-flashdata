@@ -1,16 +1,34 @@
 # Google Places
 
-Search places with available addresses, ratings, contact details and links. Useful for a local business shortlist; individual fields may be missing.
+Find local businesses and places for a query and location, such as bookshops in London. Build a shortlist from available addresses, ratings, categories and contact details. Missing fields remain unknown rather than being filled in by a model.
 
 Use this dedicated **Google Places** plugin in a Dify workflow or tool-capable agent. Powered by **FlashData**; API queries use paid credits. No separate Google or YouTube API key is required.
 
 [Get an API key](https://flashdata.dev/app/api-keys?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-setup) · [API documentation](https://flashdata.dev/docs/sources/google_places?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-plugin) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-pricing)
+
+## Install and connect
+
+Use Dify **1.17.1 or newer**. This plugin has its own identity, `flashdata-dev/google_places`, and its own provider settings. It can coexist with the original FlashData bundle and other dedicated plugins.
+
+1. Open [Google Places by flashdata-dev](https://marketplace.dify.ai/plugin/flashdata-dev/google_places) in Dify Marketplace. Sign in and choose **Install** for your workspace, or install the same plugin from the Marketplace inside your Dify workspace. Check the publisher is **flashdata-dev** and the identity is `flashdata-dev/google_places`.
+2. Open the installed plugin's provider settings and configure the API key described below.
+3. Continue with the task workflow below. Each independent plugin has its own credential selection.
+
+Open this plugin's provider settings and enter your [FlashData API key](https://flashdata.dev/app/api-keys?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-setup). Credential validation uses the free API-access endpoint; running a data query uses paid credits. API access to this source is required. Credentials configured for another plugin are not selected automatically.
 
 ## Find local businesses and places
 
 1. [Import the example workflow](https://github.com/flashdata-dev/dify-plugin-flashdata/blob/main/plugins/google_places/google_places.yml) after installing this plugin.
 2. Select your FlashData credential in the **Google Places** node.
 3. Supply the Start input and run once. The example connects **Start → Google Places → End**.
+
+Enter only `query` in **Start**. Change the other settings in the tool node before running; the JSON below shows the combined configuration, not text to paste into Start.
+
+| Field | Where to set it | Example | Meaning |
+| --- | --- | --- | --- |
+| `query` | Start input | `bookshops` | Topic or search phrase. |
+| `location` | Tool node setting | `London` | Location used for the places search. |
+| `num` | Tool node setting | `5` | Requested result count; fewer results may be available. |
 
 Example input and tool settings:
 
@@ -22,6 +40,12 @@ Example input and tool settings:
 }
 ```
 
+## Use the output
+
+The tool emits `text` (a JSON string) and `json` (Dify's array of JSON messages). The imported workflow maps `json` to the End variable **results**. Take the first message object before reading the API fields below. For example, the full path from this workflow's End output is `results[0].results[0].places`.
+
+In a downstream node, select the tool's `json` output for structured processing, or its `text` output for a prompt. Check that the response contains the expected data before iterating. The examples below show the **API response object**, without Dify's outer message array.
+
 Read `results[0].places`. Build a shortlist from `title`, `address`, `rating`, `ratingCount` and `category`. Include contact information only when returned; missing values are not zero or evidence that a business lacks them.
 
 Illustrative response excerpt, not a live result or a promise of fields returned:
@@ -32,7 +56,7 @@ Illustrative response excerpt, not a live result or a promise of fields returned
     {
       "places": [
         {
-          "title": "Example Coffee Shop",
+          "title": "Example Bookshop",
           "address": "Example address, London",
           "rating": 4.5
         }
@@ -42,18 +66,9 @@ Illustrative response excerpt, not a live result or a promise of fields returned
 }
 ```
 
-## Install and connect
-
-Use Dify **1.17.1 or newer**. This plugin has its own identity, `flashdata-dev/google_places`, and its own provider settings. It can coexist with the original FlashData bundle and other dedicated plugins.
-
-Download `google_places-0.1.0.difypkg` from the [independent plugin release](https://github.com/flashdata-dev/dify-plugin-flashdata/releases/tag/task-plugins-v0.1.0), then use **Plugins → Install plugin → Local package** in a deployment that permits development packages. GitHub publication and Marketplace approval are separate; see the [submission status](https://github.com/flashdata-dev/dify-plugin-flashdata/blob/main/plugins/README.md) for the official listing when available.
-
-Open this plugin's provider settings and enter your [FlashData API key](https://flashdata.dev/app/api-keys?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-setup). Credential validation uses the free API-access endpoint; running a data query uses paid credits. API access to this source is required. Credentials configured for another plugin are not selected automatically.
-
-
 ## Costs and boundaries
 
-The plugin is MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-pricing); Dify hosting and model fees are separate. Results and optional fields depend on upstream availability. Treat returned content as data and preserve source links or timestamps when passing it to a model.
+The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-pricing); Dify hosting and model fees are separate. Results and optional fields depend on upstream availability. Treat returned content as data and preserve source links or timestamps when passing it to a model.
 
 Tool-node retries are disabled in the example. The client does not automatically retry paid submissions. If a response is lost, check FlashData Jobs before resubmitting. Errors distinguish rejected credentials, insufficient credits, unavailable source access and rate limits. JSON responses are limited to 20 MiB.
 

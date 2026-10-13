@@ -1,6 +1,6 @@
 app:
   description: Uses the independent Google News plugin (flashdata-dev/google_news
-    0.1.0). Configure its provider credential before running.
+    0.1.1). Configure its provider credential before running.
   icon: 🤖
   icon_background: '#FFEAD5'
   mode: workflow
