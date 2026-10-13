@@ -1,5 +1,7 @@
 # Google Search & YouTube Tools
 
+**Looking for a dedicated plugin?** [Browse the 15 independent Google and YouTube plugins](plugins/README.md), each with its own package, provider identity, task guide and workflow. The bundle documented below remains available for existing workflows; it is one Marketplace entry, not 15 separate listings.
+
 Search Google, monitor news, retrieve YouTube transcripts, inspect channels or deliver video and audio to your own storage from a Dify workflow. **FlashData provides 15 source tools with structured JSON output**, plus two tools for reading asynchronous jobs.
 
 Start with the task you need below. Each source has a ready-to-import workflow and its own API documentation. The plugin is open source; **API queries use paid FlashData Credits**. Dify hosting or model fees are separate.
