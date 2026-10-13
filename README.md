@@ -1,4 +1,4 @@
-# Google & YouTube Data for Dify
+# Google Search & YouTube Tools
 
 Search Google, monitor news, retrieve YouTube transcripts, inspect channels or deliver video and audio to your own storage from a Dify workflow. **FlashData provides 15 source tools with structured JSON output**, plus two tools for reading asynchronous jobs.
 
@@ -31,7 +31,7 @@ Start with the task you need below. Each source has a ready-to-import workflow a
 ## Install and connect
 
 1. Use Dify **1.17.1 or newer**. The existing plugin is [on Dify Marketplace](https://marketplace.dify.ai/plugin/flashdata-dev/flashdata). The complete 15-source tool set requires **0.2.0**; check the displayed version before installing. Marketplace review and GitHub Release publication are separate.
-2. To use a GitHub release before Marketplace updates, download `flashdata-0.2.0.difypkg` from [Releases](https://github.com/flashdata-dev/dify-plugin-flashdata/releases) and install it through **Plugins → Install plugin → Local package** in a deployment that permits unsigned development packages. The Marketplace package is distributed by Dify separately.
+2. To use a GitHub release before Marketplace updates, download `flashdata-0.2.1.difypkg` from [Releases](https://github.com/flashdata-dev/dify-plugin-flashdata/releases) and install it through **Plugins → Install plugin → Local package** in a deployment that permits unsigned development packages. The Marketplace package is distributed by Dify separately.
 3. [Create a FlashData API key](https://flashdata.dev/app/api-keys?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=plugin-setup), with access to the sources you intend to use. Open this plugin's provider settings and enter it. Validation uses the free API-access endpoint, not a paid query.
 4. For search and data tools, leave **Download storage JSON** empty. For media delivery, configure it as described below.
 5. Import a [task workflow](https://github.com/flashdata-dev/dify-plugin-flashdata/blob/main/examples/README.md), select your credential in the tool node and supply its Start input. Or add individual tools to your existing workflow or tool-capable agent.
@@ -85,7 +85,7 @@ Every data query consumes FlashData Credits under current [pricing](https://flas
 
 Inputs are validated before submission. The plugin distinguishes rejected credentials (401), insufficient credits (402), source access (403) and rate limits (429), and never automatically retries paid POSTs. If a response is lost, check FlashData Jobs before submitting again. Result reads can be retried independently. Result JSON larger than 20 MiB must be retrieved outside this plugin.
 
-The four original tool IDs and their defaults are preserved for existing workflows. Version 0.2.0 adds eleven source tools, two job readers and optional storage credentials. Batch submission is not part of this plugin. Community Edition checks, HTTP fixture tests, live API tests and Dify Cloud tests are recorded separately in the [validation notes](https://github.com/flashdata-dev/dify-plugin-flashdata/tree/main/docs); do not assume a workflow is validated on every model or deployment.
+The four original tool IDs and their defaults are preserved for existing workflows. Version 0.2.0 adds eleven source tools, two job readers and optional storage credentials. Version 0.2.1 clarifies the plugin display name; tool behavior is unchanged. Batch submission is not part of this plugin. Community Edition checks, HTTP fixture tests, live API tests and Dify Cloud tests are recorded separately in the [validation notes](https://github.com/flashdata-dev/dify-plugin-flashdata/tree/main/docs); do not assume a workflow is validated on every model or deployment.
 
 ## Privacy, support and development
 
@@ -95,7 +95,7 @@ The four original tool IDs and their defaults are preserved for existing workflo
 uv venv --python 3.12
 uv pip install --python .venv/bin/python -r requirements.txt
 .venv/bin/python -m unittest discover -s tests -v
-dify plugin package . -o dist/flashdata-0.2.0.difypkg
+dify plugin package . -o dist/flashdata-0.2.1.difypkg
 ```
 
 Tests use HTTP fixtures and do not consume credits. Source schemas in `flashdata/sources.json` come from the shared FlashData source catalog; download semantics and storage credentials are validated separately. Package exclusions in `.difyignore` keep credentials, tests, examples and development files out of the runtime package. Public workflow examples remain available in this repository.

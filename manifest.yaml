@@ -1,10 +1,10 @@
-version: 0.2.0
+version: 0.2.1
 type: plugin
 author: flashdata-dev
 name: flashdata
 label:
-  en_US: Google & YouTube Data by FlashData
-  zh_Hans: Google 与 YouTube 数据 · FlashData
+  en_US: Google Search & YouTube Tools
+  zh_Hans: Google 搜索与 YouTube 工具
 description:
   en_US: Google Search, News, Images, Shopping, Videos and Places. YouTube search,
     transcripts, captions, metadata, chapters, channels, autocomplete, license labels
