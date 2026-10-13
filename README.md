@@ -32,8 +32,8 @@ Start with the task you need below. Each source has a ready-to-import workflow a
 
 ## Install and connect
 
-1. Use Dify **1.17.1 or newer**. The existing plugin is [on Dify Marketplace](https://marketplace.dify.ai/plugin/flashdata-dev/flashdata). The complete 15-source tool set requires **0.2.0**; check the displayed version before installing. Marketplace review and GitHub Release publication are separate.
-2. To use a GitHub release before Marketplace updates, download `flashdata-0.2.1.difypkg` from [Releases](https://github.com/flashdata-dev/dify-plugin-flashdata/releases) and install it through **Plugins → Install plugin → Local package** in a deployment that permits unsigned development packages. The Marketplace package is distributed by Dify separately.
+1. Use Dify **1.17.1 or newer**. Open [Google Search & YouTube Tools by flashdata-dev](https://marketplace.dify.ai/plugin/flashdata-dev/flashdata) in Dify Marketplace and install it for your workspace. The current public bundle is **0.2.1**. For a single task, choose its [independent Marketplace plugin](plugins/README.md).
+2. Check the publisher is **flashdata-dev** and open the installed plugin's provider settings.
 3. [Create a FlashData API key](https://flashdata.dev/app/api-keys?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=plugin-setup), with access to the sources you intend to use. Open this plugin's provider settings and enter it. Validation uses the free API-access endpoint, not a paid query.
 4. For search and data tools, leave **Download storage JSON** empty. For media delivery, configure it as described below.
 5. Import a [task workflow](https://github.com/flashdata-dev/dify-plugin-flashdata/blob/main/examples/README.md), select your credential in the tool node and supply its Start input. Or add individual tools to your existing workflow or tool-capable agent.
