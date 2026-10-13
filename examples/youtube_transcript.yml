@@ -1,10 +1,12 @@
 app:
-  description: One FlashData tool call. Requires the FlashData plugin and a provider
-    credential.
+  description: Retrieve existing timestamped subtitles and full text in a selected
+    language. Defaults to automatically generated captions. No speech recognition,
+    translation or silent fallback to another track. Requires FlashData 0.2.0 and
+    your provider credential.
   icon: 🤖
   icon_background: '#FFEAD5'
   mode: workflow
-  name: FlashData Youtube Transcript
+  name: Retrieve timestamped YouTube transcripts — FlashData
   use_icon_as_answer_icon: false
 dependencies: []
 kind: app
@@ -88,11 +90,11 @@ workflow:
         title: Start
         type: start
         variables:
-        - label: video_id
+        - label: Video Id
           variable: video_id
           type: text-input
           required: true
-          max_length: 2000
+          max_length: 200
           options: []
       height: 90
       id: start
@@ -109,13 +111,15 @@ workflow:
       width: 244
     - data:
         type: tool
-        title: Youtube Transcript
-        desc: One real-time FlashData request. Automatic retries disabled.
+        title: YouTube Transcript
+        desc: Retrieve existing timestamped subtitles and full text in a selected
+          language. Defaults to automatically generated captions. No speech recognition,
+          translation or silent fallback to another track.
         provider_id: flashdata-dev/flashdata/flashdata
         provider_name: flashdata-dev/flashdata/flashdata
         provider_type: builtin
         tool_name: youtube_transcript
-        tool_label: Youtube Transcript
+        tool_label: YouTube Transcript
         tool_configurations: {}
         tool_node_version: '2'
         tool_parameters:
@@ -127,7 +131,7 @@ workflow:
             value: en
           auto:
             type: constant
-            value: false
+            value: true
         is_team_authorization: true
         retry_config:
           retry_enabled: false

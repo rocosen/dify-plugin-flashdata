@@ -1,10 +1,11 @@
 app:
-  description: One FlashData tool call. Requires the FlashData plugin and a provider
-    credential.
+  description: Get ranked web links, titles, snippets and available SERP features
+    for a query. Use country, language, location or time filters to narrow a research
+    topic. Requires FlashData 0.2.0 and your provider credential.
   icon: 🤖
   icon_background: '#FFEAD5'
   mode: workflow
-  name: FlashData Google Search
+  name: Search Google and export structured web results — FlashData
   use_icon_as_answer_icon: false
 dependencies: []
 kind: app
@@ -88,7 +89,7 @@ workflow:
         title: Start
         type: start
         variables:
-        - label: query
+        - label: Query
           variable: query
           type: text-input
           required: true
@@ -110,7 +111,9 @@ workflow:
     - data:
         type: tool
         title: Google Search
-        desc: One real-time FlashData request. Automatic retries disabled.
+        desc: Get ranked web links, titles, snippets and available SERP features for
+          a query. Use country, language, location or time filters to narrow a research
+          topic.
         provider_id: flashdata-dev/flashdata/flashdata
         provider_name: flashdata-dev/flashdata/flashdata
         provider_type: builtin

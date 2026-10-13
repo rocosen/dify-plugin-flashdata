@@ -1,0 +1,35 @@
+identity:
+  name: youtube_channel
+  author: flashdata-dev
+  label:
+    en_US: YouTube Channel Data
+description:
+  human:
+    en_US: Retrieve a YouTube channel profile and recent videos using its handle.
+      Request 1–100 videos; returned fields and count depend on upstream availability.
+  llm: Retrieve a YouTube channel profile and recent videos using its handle. Request
+    1–100 videos; returned fields and count depend on upstream availability.
+parameters:
+- name: handle
+  type: string
+  required: true
+  label:
+    en_US: Handle
+  human_description:
+    en_US: YouTube channel handle, for example @GoogleDevelopers; up to 100 characters.
+  llm_description: YouTube channel handle, for example @GoogleDevelopers; up to 100
+    characters.
+  form: llm
+- name: video_limit
+  type: number
+  required: false
+  label:
+    en_US: Video limit
+  human_description:
+    en_US: Maximum recent channel videos, 1–100; actual results may be fewer.
+  llm_description: Maximum recent channel videos, 1–100; actual results may be fewer.
+  form: llm
+  default: 20
+extra:
+  python:
+    source: tools/youtube_channel.py

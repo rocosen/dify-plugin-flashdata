@@ -1,0 +1,28 @@
+identity:
+  name: youtube_trainability
+  author: flashdata-dev
+  label:
+    en_US: YouTube License Metadata
+description:
+  human:
+    en_US: Read the Creative Commons license classification exposed by the video metadata.
+      The API source is youtube_trainability; this does not read creator training
+      settings or grant training permission.
+  llm: Read the Creative Commons license classification exposed by the video metadata.
+    The API source is youtube_trainability; this does not read creator training settings
+    or grant training permission.
+parameters:
+- name: video_id
+  type: string
+  required: true
+  label:
+    en_US: Video id
+  human_description:
+    en_US: An 11-character video ID or youtube.com / youtu.be video URL; parsed locally
+      to an ID.
+  llm_description: An 11-character video ID or youtube.com / youtu.be video URL; parsed
+    locally to an ID.
+  form: llm
+extra:
+  python:
+    source: tools/youtube_trainability.py

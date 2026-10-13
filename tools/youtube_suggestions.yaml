@@ -1,0 +1,45 @@
+identity:
+  name: youtube_suggestions
+  author: flashdata-dev
+  label:
+    en_US: YouTube Autocomplete
+description:
+  human:
+    en_US: Get autocomplete phrases for a query prefix in a selected language and
+      region. Use them to explore related topics; they are suggestions, not search-volume
+      estimates.
+  llm: Get autocomplete phrases for a query prefix in a selected language and region.
+    Use them to explore related topics; they are suggestions, not search-volume estimates.
+parameters:
+- name: query
+  type: string
+  required: true
+  label:
+    en_US: Query
+  human_description:
+    en_US: Search terms or a query prefix, 1–2,000 characters.
+  llm_description: Search terms or a query prefix, 1–2,000 characters.
+  form: llm
+- name: language
+  type: string
+  required: false
+  label:
+    en_US: Language
+  human_description:
+    en_US: Caption or suggestions language, such as en or zh-CN.
+  llm_description: Caption or suggestions language, such as en or zh-CN.
+  form: llm
+  default: en
+- name: region
+  type: string
+  required: false
+  label:
+    en_US: Region
+  human_description:
+    en_US: Two-letter suggestions region, such as US.
+  llm_description: Two-letter suggestions region, such as US.
+  form: llm
+  default: US
+extra:
+  python:
+    source: tools/youtube_suggestions.py

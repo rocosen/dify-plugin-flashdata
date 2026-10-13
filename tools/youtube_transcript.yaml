@@ -5,42 +5,44 @@ identity:
     en_US: YouTube Transcript
 description:
   human:
-    en_US: Get timestamped YouTube subtitles. Choose language and automatic or manually
-      created captions; no fallback between caption types or languages is performed.
-  llm: Get timestamped YouTube subtitles. Choose language and automatic or manually
-    created captions; no fallback between caption types or languages is performed.
+    en_US: Retrieve existing timestamped subtitles and full text in a selected language.
+      Defaults to automatically generated captions. No speech recognition, translation
+      or silent fallback to another track.
+  llm: Retrieve existing timestamped subtitles and full text in a selected language.
+    Defaults to automatically generated captions. No speech recognition, translation
+    or silent fallback to another track.
 parameters:
 - name: video_id
   type: string
   required: true
   label:
-    en_US: YouTube video
+    en_US: Video id
   human_description:
-    en_US: An 11-character video ID or a youtube.com / youtu.be video URL. The URL
-      is parsed locally; only the video ID is sent to FlashData.
-  llm_description: An 11-character video ID or a youtube.com / youtu.be video URL.
-    The URL is parsed locally; only the video ID is sent to FlashData.
+    en_US: An 11-character video ID or youtube.com / youtu.be video URL; parsed locally
+      to an ID.
+  llm_description: An 11-character video ID or youtube.com / youtu.be video URL; parsed
+    locally to an ID.
   form: llm
 - name: language
   type: string
   required: false
   label:
-    en_US: Caption language
+    en_US: Language
   human_description:
-    en_US: Caption language code, such as en. No language fallback.
-  llm_description: Caption language code, such as en. No language fallback.
+    en_US: Caption or suggestions language, such as en or zh-CN.
+  llm_description: Caption or suggestions language, such as en or zh-CN.
   form: llm
   default: en
 - name: auto
   type: boolean
   required: false
   label:
-    en_US: Automatic captions
+    en_US: Auto
   human_description:
-    en_US: True selects automatic captions; false selects manual captions. No fallback
-      between the two.
-  llm_description: True selects automatic captions; false selects manual captions.
-    No fallback between the two.
+    en_US: true selects automatic captions; false selects manual uploader captions.
+      No fallback.
+  llm_description: true selects automatic captions; false selects manual uploader
+    captions. No fallback.
   form: llm
   default: true
 extra:

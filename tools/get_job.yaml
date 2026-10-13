@@ -1,0 +1,24 @@
+identity:
+  name: get_job
+  author: flashdata-dev
+  label:
+    en_US: Get Job
+description:
+  human:
+    en_US: Read the status of an existing FlashData job without submitting another
+      query. Poll this read for pending or processing jobs.
+  llm: Read the status of an existing FlashData job without submitting another query.
+    Poll this read for pending or processing jobs.
+parameters:
+- name: job_id
+  type: string
+  required: true
+  label:
+    en_US: Job ID
+  human_description:
+    en_US: The id returned by the download submission, beginning with job_.
+  llm_description: The id returned by the download submission, beginning with job_.
+  form: llm
+extra:
+  python:
+    source: tools/get_job.py

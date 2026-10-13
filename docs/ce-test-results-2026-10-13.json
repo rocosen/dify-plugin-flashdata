@@ -1,0 +1,211 @@
+{
+  "checked_at": "2026-10-13T04:11:41.734237+00:00",
+  "plugin_version": "0.2.0",
+  "dify_version": "1.17.1",
+  "plugin_daemon": "0.6.10-local",
+  "platform": "Linux arm64",
+  "package_sha256": "211d4118be55b7d1d5a4c5eca805e542d9cfdd07868467b43a42ae98b6fd5ed0",
+  "installed_unique_identifier": "flashdata-dev/flashdata:0.2.0@95a049d90bf31c68e8a84fa23b568d23f1c416003d5a34d55d76e6d468ed2579",
+  "tool_count": 17,
+  "tool_ids": [
+    "google_search",
+    "google_images",
+    "google_news",
+    "google_shopping",
+    "google_videos",
+    "google_places",
+    "youtube_search",
+    "youtube_search_extended",
+    "youtube_metadata",
+    "youtube_transcript",
+    "youtube_captions",
+    "youtube_trainability",
+    "youtube_channel",
+    "youtube_suggestions",
+    "youtube_download",
+    "get_job",
+    "get_job_results"
+  ],
+  "upgrade": "Local package replaced 0.1.0 using Dify preserve_credentials uninstall/install flow; existing apps preserved.",
+  "workflow_imports": [
+    {
+      "file": "get_job.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "get_job"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "get_job_results.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "get_job_results"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "google_images.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "google_images"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "google_news.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "google_news"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "google_places.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "google_places"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "google_search.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "google_search"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "google_shopping.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "google_shopping"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "google_videos.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "google_videos"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "youtube_captions.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "youtube_captions"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "youtube_channel.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "youtube_channel"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "youtube_download.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "youtube_download"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "youtube_metadata.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "youtube_metadata"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "youtube_search.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "youtube_search"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "youtube_search_extended.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "youtube_search_extended"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "youtube_suggestions.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "youtube_suggestions"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "youtube_trainability.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "youtube_trainability"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    },
+    {
+      "file": "youtube_transcript.yml",
+      "status": "completed",
+      "tool_nodes": [
+        "youtube_transcript"
+      ],
+      "dependencies": {
+        "leaked_dependencies": []
+      }
+    }
+  ],
+  "fixture_tests": 27,
+  "billable_live_queries_this_round": 0,
+  "live_api_authentication": "Free API-access HTTP 200; 15 sources; result origin verified.",
+  "limitations": [
+    "Workflow import and tool discovery are not live query execution.",
+    "No new live data or customer-storage write tests.",
+    "Previous four-tool live tests remain historical 0.1.0 evidence.",
+    "Dify Cloud and live LLM Agent not tested."
+  ]
+}

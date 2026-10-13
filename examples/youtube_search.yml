@@ -1,10 +1,11 @@
 app:
-  description: One FlashData tool call. Requires the FlashData plugin and a provider
-    credential.
+  description: Find YouTube videos for a topic, with optional upload-date, duration,
+    type, feature and sort filters. Request 1–20 results; actual results may be fewer.
+    Requires FlashData 0.2.0 and your provider credential.
   icon: 🤖
   icon_background: '#FFEAD5'
   mode: workflow
-  name: FlashData Youtube Search
+  name: Discover YouTube videos by keyword — FlashData
   use_icon_as_answer_icon: false
 dependencies: []
 kind: app
@@ -88,7 +89,7 @@ workflow:
         title: Start
         type: start
         variables:
-        - label: query
+        - label: Query
           variable: query
           type: text-input
           required: true
@@ -109,13 +110,15 @@ workflow:
       width: 244
     - data:
         type: tool
-        title: Youtube Search
-        desc: One real-time FlashData request. Automatic retries disabled.
+        title: YouTube Search
+        desc: Find YouTube videos for a topic, with optional upload-date, duration,
+          type, feature and sort filters. Request 1–20 results; actual results may
+          be fewer.
         provider_id: flashdata-dev/flashdata/flashdata
         provider_name: flashdata-dev/flashdata/flashdata
         provider_type: builtin
         tool_name: youtube_search
-        tool_label: Youtube Search
+        tool_label: YouTube Search
         tool_configurations: {}
         tool_node_version: '2'
         tool_parameters:
@@ -124,7 +127,10 @@ workflow:
             value: '{{#start.query#}}'
           max_results:
             type: constant
-            value: 1
+            value: 5
+          filters_json:
+            type: constant
+            value: '{"upload_date":"this_week"}'
         is_team_authorization: true
         retry_config:
           retry_enabled: false

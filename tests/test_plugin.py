@@ -111,17 +111,19 @@ class ClientTest(unittest.TestCase):
 
 
 class SDKIntegrationTest(unittest.TestCase):
-    def test_four_tools_load_and_emit_text_and_json(self):
+    def test_realtime_tools_load_and_emit_text_and_json(self):
         provider = ToolProviderConfiguration.model_validate(yaml.safe_load(Path("provider/flashdata.yaml").read_text()))
-        self.assertEqual(len(provider.tools),4)
+        self.assertEqual(len(provider.tools),17)
         for path in Path("tools").glob("*.yaml"):
             config = ToolConfiguration.model_validate(yaml.safe_load(path.read_text()))
             source = config.identity.name
+            if source in ("youtube_download", "get_job", "get_job_results"):
+                continue
             module = importlib.import_module("tools."+source)
             cls = getattr(module, "".join(word.title() for word in source.split("_"))+"Tool")
             result = {"source":source,"status":"done","results":[{"text":"Evidence"}],"usage":{"credits":0.01}}
             with self.subTest(source=source), patch("httpx.Client.request", return_value=httpx.Response(200,json=result)) as request:
-                messages = list(cls.from_credentials({"api_key":"fixture-key"}).invoke({"query":"Dify", "video_id":"dQw4w9WgXcQ"}))
+                messages = list(cls.from_credentials({"api_key":"fixture-key"}).invoke({"query":"Dify", "video_id":"dQw4w9WgXcQ", "handle":"@GoogleDevelopers"}))
                 self.assertEqual(len(messages),2)
                 self.assertEqual(json.loads(messages[0].message.text),result)
                 self.assertEqual(messages[1].message.json_object,result)

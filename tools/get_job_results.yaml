@@ -1,0 +1,26 @@
+identity:
+  name: get_job_results
+  author: flashdata-dev
+  label:
+    en_US: Get Job Results
+description:
+  human:
+    en_US: Read the result of a completed FlashData job, including download upload
+      manifests. Pending or failed jobs return their current status. Results expire
+      24 hours after completion; this does not resubmit the paid query.
+  llm: Read the result of a completed FlashData job, including download upload manifests.
+    Pending or failed jobs return their current status. Results expire 24 hours after
+    completion; this does not resubmit the paid query.
+parameters:
+- name: job_id
+  type: string
+  required: true
+  label:
+    en_US: Job ID
+  human_description:
+    en_US: The id returned by the download submission, beginning with job_.
+  llm_description: The id returned by the download submission, beginning with job_.
+  form: llm
+extra:
+  python:
+    source: tools/get_job_results.py

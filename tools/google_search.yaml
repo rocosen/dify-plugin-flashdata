@@ -5,85 +5,80 @@ identity:
     en_US: Google Search
 description:
   human:
-    en_US: Search Google with FlashData and return ranked links, titles, snippets
-      and available search features.
-  llm: Search Google with FlashData and return ranked links, titles, snippets and
-    available search features.
+    en_US: Get ranked web links, titles, snippets and available SERP features for
+      a query. Use country, language, location or time filters to narrow a research
+      topic.
+  llm: Get ranked web links, titles, snippets and available SERP features for a query.
+    Use country, language, location or time filters to narrow a research topic.
 parameters:
 - name: query
   type: string
   required: true
   label:
-    en_US: Search query
+    en_US: Query
   human_description:
-    en_US: Search terms, between 1 and 2,000 characters. Do not include secrets or
-      unnecessary personal data.
-  llm_description: Search terms, between 1 and 2,000 characters. Do not include secrets
-    or unnecessary personal data.
+    en_US: Search terms or a query prefix, 1–2,000 characters.
+  llm_description: Search terms or a query prefix, 1–2,000 characters.
+  form: llm
+- name: gl
+  type: string
+  required: false
+  label:
+    en_US: Gl
+  human_description:
+    en_US: Two-letter country code, such as us or gb. Omit to use the search provider
+      behavior.
+  llm_description: Two-letter country code, such as us or gb. Omit to use the search
+    provider behavior.
+  form: llm
+- name: hl
+  type: string
+  required: false
+  label:
+    en_US: Hl
+  human_description:
+    en_US: Interface language, such as en or zh-CN. Omit to use the search provider
+      behavior.
+  llm_description: Interface language, such as en or zh-CN. Omit to use the search
+    provider behavior.
+  form: llm
+- name: location
+  type: string
+  required: false
+  label:
+    en_US: Location
+  human_description:
+    en_US: Optional broad search location, such as London; up to 200 characters.
+  llm_description: Optional broad search location, such as London; up to 200 characters.
   form: llm
 - name: num
   type: number
   required: false
   label:
-    en_US: Result count
+    en_US: Num
   human_description:
-    en_US: Requested number of results, 1-100.
-  llm_description: Requested number of results, 1-100.
+    en_US: Requested results per page, 1–100. The actual count may be lower.
+  llm_description: Requested results per page, 1–100. The actual count may be lower.
   form: llm
   default: 10
-  min: 1
-  max: 100
 - name: page
   type: number
   required: false
   label:
     en_US: Page
   human_description:
-    en_US: Search page, 1-100.
-  llm_description: Search page, 1-100.
+    en_US: Page number, 1–100. Each page is a separate query.
+  llm_description: Page number, 1–100. Each page is a separate query.
   form: llm
   default: 1
-  min: 1
-  max: 100
-- name: gl
-  type: string
-  required: false
-  label:
-    en_US: Country code
-  human_description:
-    en_US: Optional two-letter country code, such as us.
-  llm_description: Optional two-letter country code, such as us.
-  form: llm
-- name: hl
-  type: string
-  required: false
-  label:
-    en_US: Language code
-  human_description:
-    en_US: Optional language code, such as en.
-  llm_description: Optional language code, such as en.
-  form: llm
-- name: location
-  type: string
-  required: false
-  label:
-    en_US: Search location
-  human_description:
-    en_US: Optional broad search location, up to 200 characters. Do not enter precise
-      personal location.
-  llm_description: Optional broad search location, up to 200 characters. Do not enter
-    precise personal location.
-  form: llm
 - name: tbs
   type: string
   required: false
   label:
-    en_US: Time filter
+    en_US: Tbs
   human_description:
-    en_US: Optional Google time filter, such as qdr:w for the past week, up to 200
-      characters.
-  llm_description: Optional Google time filter, such as qdr:w for the past week, up
-    to 200 characters.
+    en_US: Google time filter, such as qdr:w for the past week.
+  llm_description: Google time filter, such as qdr:w for the past week.
   form: llm
 - name: autocorrect
   type: boolean
@@ -91,8 +86,8 @@ parameters:
   label:
     en_US: Autocorrect
   human_description:
-    en_US: Whether to autocorrect the search query.
-  llm_description: Whether to autocorrect the search query.
+    en_US: Whether Google may autocorrect the search terms.
+  llm_description: Whether Google may autocorrect the search terms.
   form: llm
   default: true
 extra:
