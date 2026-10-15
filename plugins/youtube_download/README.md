@@ -24,13 +24,13 @@ Configure **Download storage JSON** in provider credentials before submitting. F
 
 The credential is kept out of LLM tool arguments and exported workflows. Other storage providers use the fields in the API documentation. Submit once and keep the returned `id`; use **Get Job** until the job completes, then **Get Job Results** with the same ID. Poll the existing job instead of rerunning the paid download. The result contains `output.results[0]` with the upload manifest. A private storage URL is not automatically a public link.
 
-[Get Job workflow](https://github.com/flashdata-dev/dify-plugin-flashdata/blob/main/plugins/youtube_download/get_job.yml) · [Get Job Results workflow](https://github.com/flashdata-dev/dify-plugin-flashdata/blob/main/plugins/youtube_download/get_job_results.yml)
+[Get Job workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_download/get_job.yml) · [Get Job Results workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_download/get_job_results.yml)
 
 JSON results expire after 24 hours; media retention follows your storage settings. Downloads reserve credits at admission and bill by actual delivered bytes.
 
 ## Deliver YouTube video or audio to your cloud storage
 
-1. [Import the example workflow](https://github.com/flashdata-dev/dify-plugin-flashdata/blob/main/plugins/youtube_download/youtube_download.yml) after installing this plugin.
+1. [Import the example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_download/youtube_download.yml) after installing this plugin.
 2. Select your FlashData credential in the **YouTube Download** node.
 3. Supply the Start input and run once. The example connects **Start → YouTube Download → End**.
 
@@ -76,6 +76,6 @@ The plugin connects over HTTPS to `api.flashdata.dev` and `data.flashdata.dev`. 
 
 ## Source and support
 
-[Source repository](https://github.com/flashdata-dev/dify-plugin-flashdata) · [Privacy policy](https://github.com/flashdata-dev/dify-plugin-flashdata/blob/main/plugins/youtube_download/PRIVACY.md) · [Validation and release notes](https://github.com/flashdata-dev/dify-plugin-flashdata/tree/main/docs)
+[Source repository](https://github.com/rocosen/dify-plugin-flashdata) · [Privacy policy](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_download/PRIVACY.md) · [Validation and release notes](https://github.com/rocosen/dify-plugin-flashdata/tree/main/docs)
 
 Contact **support@flashdata.dev**. Do not attach API keys or storage credentials to issues. Community Edition installation, workflow import, fixture tests, live queries and Dify Cloud are recorded separately in the validation notes.

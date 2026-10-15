@@ -36,7 +36,7 @@ Outputs are under `dist/task-plugins/`, including SHA256SUMS and packages.json. 
 
 ## Publication status
 
-As of 2026-10-13, all 15 version 0.1.0 packages are [released](https://github.com/flashdata-dev/dify-plugin-flashdata/releases/tag/task-plugins-v0.1.0), approved and publicly listed in Dify Marketplace. All 15 official submission pull requests are merged; the 30 automated checks passed. Public listing, search discovery and successful workflow execution remain separate checks.
+As of 2026-10-13, all 15 version 0.1.0 packages are [released](https://github.com/rocosen/dify-plugin-flashdata/releases/tag/task-plugins-v0.1.0), approved and publicly listed in Dify Marketplace. All 15 official submission pull requests are merged; the 30 automated checks passed. Public listing, search discovery and successful workflow execution remain separate checks.
 
 Version **0.1.1** updates Marketplace installation instructions, task descriptions, workflow parameter tables and Dify output mapping, and corrects four videoId examples. The runtime and task boundaries are unchanged. The original 0.1.0 assets remain intact. GitHub package publication and Marketplace approval are separate; see the [0.1.1 release record](../docs/content-release-2026-10-13.md) for validation and submission tracking. Until the update is approved and served, a Marketplace page may still show 0.1.0.
 

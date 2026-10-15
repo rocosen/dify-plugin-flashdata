@@ -33,7 +33,7 @@ tags:
 - search
 - videos
 privacy: PRIVACY.md
-repo: https://github.com/flashdata-dev/dify-plugin-flashdata
+repo: https://github.com/rocosen/dify-plugin-flashdata
 contact: support@flashdata.dev
 network:
   domains:
