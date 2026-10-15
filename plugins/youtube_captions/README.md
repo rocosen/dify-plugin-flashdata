@@ -18,7 +18,7 @@ Open this plugin's provider settings and enter your [FlashData API key](https://
 
 ## Retrieve uploader-provided YouTube captions
 
-1. [Import the example workflow](https://github.com/flashdata-dev/dify-plugin-flashdata/blob/main/plugins/youtube_captions/youtube_captions.yml) after installing this plugin.
+1. [Import the example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_captions/youtube_captions.yml) after installing this plugin.
 2. Select your FlashData credential in the **YouTube Captions** node.
 3. Supply the Start input and run once. The example connects **Start → YouTube Captions → End**.
 
@@ -79,6 +79,6 @@ The plugin connects over HTTPS to `api.flashdata.dev` and `data.flashdata.dev`.
 
 ## Source and support
 
-[Source repository](https://github.com/flashdata-dev/dify-plugin-flashdata) · [Privacy policy](https://github.com/flashdata-dev/dify-plugin-flashdata/blob/main/plugins/youtube_captions/PRIVACY.md) · [Validation and release notes](https://github.com/flashdata-dev/dify-plugin-flashdata/tree/main/docs)
+[Source repository](https://github.com/rocosen/dify-plugin-flashdata) · [Privacy policy](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_captions/PRIVACY.md) · [Validation and release notes](https://github.com/rocosen/dify-plugin-flashdata/tree/main/docs)
 
 Contact **support@flashdata.dev**. Do not attach API keys or storage credentials to issues. Community Edition installation, workflow import, fixture tests, live queries and Dify Cloud are recorded separately in the validation notes.
