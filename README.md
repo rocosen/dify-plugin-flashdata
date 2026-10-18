@@ -89,7 +89,7 @@ Every data query consumes FlashData Credits under current [pricing](https://flas
 
 Inputs are validated before submission. The plugin distinguishes rejected credentials (401), insufficient credits (402), source access (403) and rate limits (429), and never automatically retries paid POSTs. If a response is lost, check FlashData Jobs before submitting again. Result reads can be retried independently. Result JSON larger than 20 MiB must be retrieved outside this plugin.
 
-The four original tool IDs and their defaults are preserved for existing workflows. Version 0.2.0 adds eleven source tools, two job readers and optional storage credentials. Version 0.2.1 clarifies the plugin display name. Version 0.2.2 updates Marketplace installation instructions and output guidance; tool behavior is unchanged. Batch submission is not part of this plugin. Community Edition checks, HTTP fixture tests, live API tests and Dify Cloud tests are recorded separately in the [validation notes](https://github.com/rocosen/dify-plugin-flashdata/tree/main/docs); do not assume a workflow is validated on every model or deployment.
+The four original tool IDs and their defaults are preserved for existing workflows. Version 0.2.0 adds eleven source tools, two job readers and optional storage credentials. Version 0.2.1 clarifies the plugin display name. Version 0.2.2 updates Marketplace installation instructions and output guidance. Version 0.2.3 ships the migrated source and workflow links under rocosen; publisher, tool IDs and runtime behavior are unchanged. Batch submission is not part of this plugin. Community Edition checks, HTTP fixture tests, live API tests and Dify Cloud tests are recorded separately in the [validation notes](https://github.com/rocosen/dify-plugin-flashdata/tree/main/docs); do not assume a workflow is validated on every model or deployment.
 
 ## Privacy, support and development
 
@@ -99,7 +99,7 @@ The four original tool IDs and their defaults are preserved for existing workflo
 uv venv --python 3.12
 uv pip install --python .venv/bin/python -r requirements.txt
 .venv/bin/python -m unittest discover -s tests -v
-dify plugin package . -o dist/flashdata-0.2.2.difypkg
+dify plugin package . -o dist/flashdata-0.2.3.difypkg
 ```
 
 Tests use HTTP fixtures and do not consume credits. Source schemas in `flashdata/sources.json` come from the shared FlashData source catalog; download semantics and storage credentials are validated separately. Package exclusions in `.difyignore` keep credentials, tests, examples and development files out of the runtime package. Public workflow examples remain available in this repository.
