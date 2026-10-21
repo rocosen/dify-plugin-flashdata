@@ -96,5 +96,5 @@ else:
                 self.assertEqual(len(list((directory / 'tools').glob('*.py'))), 3 if source == 'youtube_download' else 1)
                 self.assertEqual(set(json.loads((directory / 'flashdata/sources.json').read_text())['sources']), {source})
                 readme = (directory / 'README.md').read_text()
-                self.assertIn(f'https://flashdata.dev/zh/docs/sources/{source}?', readme)
+                self.assertIn(f'https://flashdata.dev/docs/sources/{source}?', readme)
                 self.assertIn(f'flashdata-dev/{CATALOG[source]["name"]}', readme)
