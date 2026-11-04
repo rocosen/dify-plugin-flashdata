@@ -1,13 +1,13 @@
 {
   "google_search": {
     "name": "google_search",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "Google Search",
       "zh_Hans": "Google 搜索"
     },
     "description": {
-      "en_US": "Google web search with ranked links, titles, snippets and available SERP features. Build research workflows with the paid FlashData API."
+      "en_US": "Google web search with ranked links, titles, snippets and available SERP features."
     },
     "tags": [
       "search"
@@ -15,13 +15,13 @@
   },
   "google_news": {
     "name": "google_news",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "Google News",
       "zh_Hans": "Google 新闻"
     },
     "description": {
-      "en_US": "Google News search for headlines, publishers, dates and article links. Create topic briefings and weekly news digests with the paid FlashData API."
+      "en_US": "Google News search for headlines, publishers, dates and article links."
     },
     "tags": [
       "search"
@@ -29,13 +29,13 @@
   },
   "google_images": {
     "name": "google_images",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "Google Images",
       "zh_Hans": "Google 图片搜索"
     },
     "description": {
-      "en_US": "Google image search with image URLs, thumbnails, dimensions and source pages. Collect visual references with the paid FlashData API."
+      "en_US": "Google image search with image URLs, thumbnails, dimensions and source pages."
     },
     "tags": [
       "search"
@@ -43,13 +43,13 @@
   },
   "google_shopping": {
     "name": "google_shopping",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "Google Shopping",
       "zh_Hans": "Google 购物搜索"
     },
     "description": {
-      "en_US": "Google Shopping product search with merchants, price labels and offer links. Compare listing snapshots with the paid FlashData API."
+      "en_US": "Google Shopping product search with merchants, price labels and offer links."
     },
     "tags": [
       "search"
@@ -57,13 +57,13 @@
   },
   "google_videos": {
     "name": "google_videos",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "Google Video Search",
       "zh_Hans": "Google 视频搜索"
     },
     "description": {
-      "en_US": "Google Video Search across websites: titles, source links and available durations for tutorial discovery. Uses the paid FlashData API."
+      "en_US": "Google Video Search across websites: titles, source links and available durations for tutorial discovery."
     },
     "tags": [
       "search"
@@ -71,13 +71,13 @@
   },
   "google_places": {
     "name": "google_places",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "Google Places",
       "zh_Hans": "Google 地点搜索"
     },
     "description": {
-      "en_US": "Find local businesses and places by query and location, with available addresses, ratings and contact details. Uses the paid FlashData API."
+      "en_US": "Find local businesses and places by query and location, with available addresses, ratings and contact details."
     },
     "tags": [
       "search"
@@ -85,13 +85,13 @@
   },
   "youtube_search": {
     "name": "youtube_search",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "YouTube Search",
       "zh_Hans": "YouTube 搜索"
     },
     "description": {
-      "en_US": "YouTube video search with keyword and upload-date filters. Request 1–20 results with video IDs and available metadata. Uses the paid FlashData API."
+      "en_US": "YouTube video search with keyword and upload-date filters. Request 1–20 results with video IDs and available metadata."
     },
     "tags": [
       "videos"
@@ -99,7 +99,7 @@
   },
   "youtube_search_extended": {
     "name": "youtube_search_extended",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "YouTube Extended Search",
       "zh_Hans": "YouTube 扩展搜索"
@@ -113,13 +113,13 @@
   },
   "youtube_metadata": {
     "name": "youtube_metadata",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "YouTube Video Metadata",
       "zh_Hans": "YouTube 视频元数据"
     },
     "description": {
-      "en_US": "Read YouTube video metadata and chapters: titles, descriptions, channel information and available statistics. Uses the paid FlashData API."
+      "en_US": "Read YouTube video metadata and chapters: titles, descriptions, channel information and available statistics."
     },
     "tags": [
       "videos"
@@ -127,13 +127,13 @@
   },
   "youtube_transcript": {
     "name": "youtube_transcript",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "YouTube Transcript",
       "zh_Hans": "YouTube 自动字幕"
     },
     "description": {
-      "en_US": "Retrieve existing YouTube transcripts and subtitles with timestamps and full text. Defaults to automatic captions. Uses the paid FlashData API."
+      "en_US": "Retrieve existing YouTube transcripts and subtitles with timestamps and full text. Defaults to automatic captions."
     },
     "tags": [
       "videos"
@@ -141,13 +141,13 @@
   },
   "youtube_captions": {
     "name": "youtube_captions",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "YouTube Captions",
       "zh_Hans": "YouTube 上传者字幕"
     },
     "description": {
-      "en_US": "Retrieve existing YouTube manual captions and subtitles uploaded by the creator, with timestamps and full text. Uses the paid FlashData API."
+      "en_US": "Retrieve existing YouTube manual captions and subtitles uploaded by the creator, with timestamps and full text."
     },
     "tags": [
       "videos"
@@ -155,13 +155,13 @@
   },
   "youtube_trainability": {
     "name": "youtube_trainability",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "YouTube License Metadata",
       "zh_Hans": "YouTube 许可元数据"
     },
     "description": {
-      "en_US": "Inspect Creative Commons license labels from YouTube video metadata. This does not grant training or reuse permission. Uses the paid FlashData API."
+      "en_US": "Inspect Creative Commons license labels from YouTube video metadata. This does not grant training or reuse permission."
     },
     "tags": [
       "videos"
@@ -169,7 +169,7 @@
   },
   "youtube_channel": {
     "name": "youtube_channel",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "YouTube Channel Data",
       "zh_Hans": "YouTube 频道数据"
@@ -183,7 +183,7 @@
   },
   "youtube_suggestions": {
     "name": "youtube_suggestions",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "YouTube Autocomplete",
       "zh_Hans": "YouTube 搜索建议"
@@ -197,13 +197,13 @@
   },
   "youtube_download": {
     "name": "youtube_download",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "label": {
       "en_US": "YouTube Download",
       "zh_Hans": "YouTube 视频下载"
     },
     "description": {
-      "en_US": "Deliver YouTube video or audio to your S3 or other supported cloud storage. Submit once, then read job status and results. Paid FlashData API."
+      "en_US": "Deliver YouTube video or audio to your S3 or other supported cloud storage. Submit once, then read job status and results."
     },
     "tags": [
       "videos"

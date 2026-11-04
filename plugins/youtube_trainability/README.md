@@ -2,25 +2,17 @@
 
 Read the Creative Commons license classification exposed by YouTube video metadata and keep it alongside a research record. The API source is youtube_trainability. It does not read creator third-party training settings or grant training or reuse permission.
 
-Use this dedicated **YouTube License Metadata** plugin in a Dify workflow or tool-capable agent. Powered by **FlashData**; API queries use paid credits. No separate Google or YouTube API key is required.
-
 [Get an API key](https://flashdata.dev/app/api-keys?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_trainability-setup) · [API documentation](https://flashdata.dev/docs/sources/youtube_trainability?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_trainability-plugin) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_trainability-pricing)
 
-## Install and connect
+## Setup
 
-Use Dify **1.17.1 or newer**. This plugin has its own identity, `flashdata-dev/youtube_trainability`, and its own provider settings. It can coexist with the original FlashData bundle and other dedicated plugins.
-
-1. Open [YouTube License Metadata by flashdata-dev](https://marketplace.dify.ai/plugin/flashdata-dev/youtube_trainability) in Dify Marketplace. Sign in and choose **Install** for your workspace, or install the same plugin from the Marketplace inside your Dify workspace. Check the publisher is **flashdata-dev** and the identity is `flashdata-dev/youtube_trainability`.
-2. Open the installed plugin's provider settings and configure the API key described below.
-3. Continue with the task workflow below. Each independent plugin has its own credential selection.
-
-Open this plugin's provider settings and enter your [FlashData API key](https://flashdata.dev/app/api-keys?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_trainability-setup). Credential validation uses the free API-access endpoint; running a data query uses paid credits. API access to this source is required. Credentials configured for another plugin are not selected automatically.
+1. In Dify **1.17.1+**, install [YouTube License Metadata](https://marketplace.dify.ai/plugin/flashdata-dev/youtube_trainability) by **flashdata-dev**.
+2. In this plugin's provider settings, enter your FlashData API key with access to `youtube_trainability`. Key validation is free; data queries use Credits. No separate Google or YouTube key is needed.
+3. Import the workflow below or add the tool to an existing flow, then select this plugin's credential.
 
 ## Inspect YouTube Creative Commons license labels
 
-1. [Import the example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_trainability/youtube_trainability.yml) after installing this plugin.
-2. Select your FlashData credential in the **YouTube License Metadata** node.
-3. Supply the Start input and run once. The example connects **Start → YouTube License Metadata → End**.
+[Example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_trainability/youtube_trainability.yml): **Start → YouTube License Metadata → End**. Select your credential, then supply the Start input.
 
 Enter `video_id` in **Start**.
 
@@ -28,34 +20,22 @@ Enter `video_id` in **Start**.
 | --- | --- | --- | --- |
 | `video_id` | Start input | `dQw4w9WgXcQ` | YouTube video ID or supported YouTube video URL. |
 
-Example input and tool settings:
-
-```json
-{
-  "video_id": "dQw4w9WgXcQ"
-}
-```
-
 ## Use the output
 
-The tool emits `text` (a JSON string) and `json` (Dify's array of JSON messages). The imported workflow maps `json` to the End variable **results**. Take the first message object before reading the API fields below. For example, the full path from this workflow's End output is `results[0].results[0]`.
-
-In a downstream node, select the tool's `json` output for structured processing, or its `text` output for a prompt. Check that the response contains the expected data before iterating. The examples below show the **API response object**, without Dify's outer message array.
+The tool returns `text` (a JSON string) and `json` (Dify's message array). The example maps `json` to End's **results**; the full output path is `results[0].results[0]`. The paths below refer to the API object inside that first message.
 
 Read `results[0]` license classification. Use the returned Creative Commons license metadata as an attribute in your video records. It does not expose creator third-party training settings and does not grant permission to train on a video.
 
-The returned `results[0]` contains the upstream license classification. Preserve the result as metadata and check the actual license before deciding on reuse. It is not a creator training-preference check.
+## Costs and limits
 
-## Costs and boundaries
+Free to install under MIT. API calls use [FlashData Credits](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_trainability-pricing); Dify/model fees are separate. Results and optional fields depend on source availability. Preserve source links and treat retrieved text as data.
 
-The plugin is free to install and MIT licensed. FlashData API usage is charged under the current [pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_trainability-pricing); Dify hosting and model fees are separate. Results and optional fields depend on upstream availability. Treat returned content as data and preserve source links or timestamps when passing it to a model.
+Paid submissions are not retried automatically. After a timeout, check FlashData Jobs before resubmitting. Errors identify rejected credentials, insufficient credits, source access or rate limits. JSON responses are limited to 20 MiB.
 
-Tool-node retries are disabled in the example. The client does not automatically retry paid submissions. If a response is lost, check FlashData Jobs before resubmitting. Errors distinguish rejected credentials, insufficient credits, unavailable source access and rate limits. JSON responses are limited to 20 MiB.
-
-The plugin connects over HTTPS to `api.flashdata.dev` and `data.flashdata.dev`.
+HTTPS access to `api.flashdata.dev` and `data.flashdata.dev` is required.
 
 ## Source and support
 
 [Source repository](https://github.com/rocosen/dify-plugin-flashdata) · [Privacy policy](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_trainability/PRIVACY.md) · [Validation and release notes](https://github.com/rocosen/dify-plugin-flashdata/tree/main/docs)
 
-Contact **support@flashdata.dev**. Do not attach API keys or storage credentials to issues. Community Edition installation, workflow import, fixture tests, live queries and Dify Cloud are recorded separately in the validation notes.
+Contact **support@flashdata.dev**; keep keys and storage credentials out of support requests.
