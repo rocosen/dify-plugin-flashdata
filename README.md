@@ -6,7 +6,7 @@ Search Google, monitor news, retrieve YouTube transcripts, inspect channels or d
 
 Each tool includes an importable workflow. Installation is free; **API calls use paid FlashData Credits**. Dify/model fees are separate.
 
-[Get an API key](https://flashdata.dev/app/api-keys?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=plugin-setup) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=plugin-pricing) · [Source code](https://github.com/rocosen/dify-plugin-flashdata) · [Workflow examples](https://github.com/rocosen/dify-plugin-flashdata/tree/main/examples)
+[Get an API key](https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=plugin-setup) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=plugin-pricing) · [Source code](https://github.com/rocosen/dify-plugin-flashdata) · [Workflow examples](https://github.com/rocosen/dify-plugin-flashdata/tree/main/examples)
 
 ## Choose a tool
 
