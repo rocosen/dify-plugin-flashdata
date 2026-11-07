@@ -35,8 +35,8 @@ def build_source(source: str, destination: Path) -> dict:
     provider["tools"] = [f"tools/{tool}.yaml" for tool in tools]
     credentials = provider["credentials_for_provider"]
     credentials["api_key"]["url"] = (
-        "https://flashdata.dev/app/api-keys?utm_source=dify&utm_medium=integration"
-        f"&utm_campaign=intent_gtm_2026q4&utm_content={source}-setup"
+        "https://flashdata.dev/signup?utm_source=dify&utm_medium=integration"
+        f"&utm_campaign=intent_gtm_2026q4&utm_content={source}-task"
     )
     if source != "youtube_download":
         del credentials["download_storage"]

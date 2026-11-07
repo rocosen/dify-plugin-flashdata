@@ -19,7 +19,7 @@ credentials_for_provider:
     help:
       en_US: Create a FlashData account and API key. Validation does not run a paid
         query.
-    url: https://flashdata.dev?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=provider-setup
+    url: https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=provider-setup
   download_storage:
     type: secret-input
     required: false
