@@ -47,7 +47,7 @@ def build_source(source: str, destination: Path) -> dict:
         shutil.copyfile(ROOT / filename, destination / filename)
     for filename in ["README.md", "PRIVACY.md"]:
         shutil.copyfile(ROOT / "plugins" / source / filename, destination / filename)
-    shutil.copyfile(ROOT / "_assets/icon.svg", destination / "_assets/icon.svg")
+    shutil.copyfile(ROOT / "_assets" / config["icon"], destination / "_assets/icon.svg")
     shutil.copyfile(ROOT / "provider/flashdata.py", destination / "provider/flashdata.py")
     for path in (ROOT / "flashdata").glob("*.py"):
         shutil.copyfile(path, destination / "flashdata" / path.name)

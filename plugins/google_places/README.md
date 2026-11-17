@@ -1,6 +1,6 @@
 # Google Places
 
-Find local businesses and places for a query and location, such as bookshops in London. Return available addresses, ratings, categories and contact details. Missing fields remain unknown rather than being filled in by a model.
+Search for local businesses and places by query and location, such as bookshops in London. Build a place list with available addresses, ratings, categories and contact details.
 
 [Get an API key](https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-task) · [API documentation](https://flashdata.dev/docs/sources/google_places?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-task) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_places-task)
 
@@ -14,7 +14,7 @@ Find local businesses and places for a query and location, such as bookshops in 
 
 [Example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/google_places/google_places.yml): **Start → Google Places → End**. Select your credential, then supply the Start input.
 
-Enter only `query` in **Start**. Set the remaining fields in the tool node.
+In the example workflow, enter `query` in **Start**. Configure the other fields shown below in the tool node; you can also bind them to Start variables in your own workflow.
 
 | Field | Where to set it | Example | Meaning |
 | --- | --- | --- | --- |

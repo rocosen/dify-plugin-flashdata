@@ -1,6 +1,6 @@
 # YouTube Channel Data
 
-Retrieve a YouTube channel profile and recent uploads from an @handle. Build a channel comparison or recent-video list with returned video IDs. Request 1–100 videos; available fields and the actual count vary. This is not a complete channel archive.
+Look up a YouTube channel by @handle to get its profile and recent uploads. Use the returned video IDs for a channel comparison or recent-video list. Request 1–100 videos; available fields and the actual count vary. This is not a complete channel archive.
 
 [Get an API key](https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_channel-task) · [API documentation](https://flashdata.dev/docs/sources/youtube_channel?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_channel-task) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_channel-task)
 
@@ -14,7 +14,7 @@ Retrieve a YouTube channel profile and recent uploads from an @handle. Build a c
 
 [Example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_channel/youtube_channel.yml): **Start → YouTube Channel Data → End**. Select your credential, then supply the Start input.
 
-Enter only `handle` in **Start**. Set the remaining fields in the tool node.
+In the example workflow, enter `handle` in **Start**. Configure the other fields shown below in the tool node; you can also bind them to Start variables in your own workflow.
 
 | Field | Where to set it | Example | Meaning |
 | --- | --- | --- | --- |

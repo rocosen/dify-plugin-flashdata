@@ -1,6 +1,6 @@
 # YouTube Autocomplete
 
-Get YouTube autocomplete search suggestions for a query prefix, language and region. Use the phrases to explore related topics before choosing a search query. Suggestions do not include search-volume estimates.
+Get related YouTube search phrases for a query prefix, language and region. Use the returned list to explore topics or choose keywords for a later video search. Suggestions do not include search-volume estimates.
 
 [Get an API key](https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_suggestions-task) · [API documentation](https://flashdata.dev/docs/sources/youtube_suggestions?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_suggestions-task) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_suggestions-task)
 
@@ -14,7 +14,7 @@ Get YouTube autocomplete search suggestions for a query prefix, language and reg
 
 [Example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_suggestions/youtube_suggestions.yml): **Start → YouTube Autocomplete → End**. Select your credential, then supply the Start input.
 
-Enter only `query` in **Start**. Set the remaining fields in the tool node.
+In the example workflow, enter `query` in **Start**. Configure the other fields shown below in the tool node; you can also bind them to Start variables in your own workflow.
 
 | Field | Where to set it | Example | Meaning |
 | --- | --- | --- | --- |

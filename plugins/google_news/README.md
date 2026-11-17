@@ -1,6 +1,6 @@
 # Google News
 
-Run a Google News search for a company, industry or developing topic. Turn returned headlines, publishers, dates and snippets into a linked news briefing. Use a time filter for a weekly digest; fetching full articles is a separate step.
+Search Google News for a company, industry or developing topic. Get headlines, publishers, dates and snippets with article links for a news briefing. Use a time filter for a weekly digest; fetching full articles is a separate step.
 
 [Get an API key](https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_news-task) · [API documentation](https://flashdata.dev/docs/sources/google_news?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_news-task) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_news-task)
 
@@ -14,7 +14,7 @@ Run a Google News search for a company, industry or developing topic. Turn retur
 
 [Example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/google_news/google_news.yml): **Start → Google News → End**. Select your credential, then supply the Start input.
 
-Enter only `query` in **Start**. Set the remaining fields in the tool node.
+In the example workflow, enter `query` in **Start**. Configure the other fields shown below in the tool node; you can also bind them to Start variables in your own workflow.
 
 | Field | Where to set it | Example | Meaning |
 | --- | --- | --- | --- |

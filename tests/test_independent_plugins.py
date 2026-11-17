@@ -14,6 +14,18 @@ from scripts.build_plugins import CATALOG, ROOT, build_source
 
 
 class IndependentPluginsTest(unittest.TestCase):
+    def test_task_packages_use_google_and_youtube_icons(self):
+        for source in CATALOG:
+            with self.subTest(source=source), tempfile.TemporaryDirectory() as temp:
+                directory = Path(temp) / 'plugin'
+                manifest = build_source(source, directory)
+                brand = 'google' if source.startswith('google_') else 'youtube'
+                icon = directory / '_assets' / manifest['icon']
+                self.assertEqual(icon.read_bytes(), (ROOT / '_assets' / f'{brand}.svg').read_bytes())
+                provider = yaml.safe_load((directory / 'provider/flashdata.yaml').read_text())
+                self.assertEqual(provider['identity']['icon'], manifest['icon'])
+                self.assertNotEqual(icon.read_bytes(), (ROOT / '_assets/icon.svg').read_bytes())
+
     def test_every_source_has_a_distinct_provider_and_matching_workflow(self):
         self.assertEqual(set(CATALOG), set(SOURCES))
         self.assertEqual(len({item['name'] for item in CATALOG.values()}), 15)

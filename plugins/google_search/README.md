@@ -14,7 +14,7 @@ Search Google for ranked web links, titles, snippets and available SERP features
 
 [Example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/google_search/google_search.yml): **Start → Google Search → End**. Select your credential, then supply the Start input.
 
-Enter only `query` in **Start**. Set the remaining fields in the tool node.
+In the example workflow, enter `query` in **Start**. Configure the other fields shown below in the tool node; you can also bind them to Start variables in your own workflow.
 
 | Field | Where to set it | Example | Meaning |
 | --- | --- | --- | --- |
@@ -26,6 +26,17 @@ Enter only `query` in **Start**. Set the remaining fields in the tool node.
 The tool returns `text` (a JSON string) and `json` (Dify's message array). The example maps `json` to End's **results**; the full output path is `results[0].results[0].organic`. The paths below refer to the API object inside that first message.
 
 Read `results[0].organic`. Keep `title`, `link`, `snippet` and `position` together when exporting sources. A snippet is a search excerpt; fetching a full page is a separate task.
+
+Example result item (illustrative):
+
+```json
+{
+  "position": 1,
+  "title": "Example page",
+  "link": "https://example.com/",
+  "snippet": "Example search excerpt."
+}
+```
 
 ## Costs and limits
 

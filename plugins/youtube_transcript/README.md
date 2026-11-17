@@ -1,6 +1,6 @@
 # YouTube Transcript
 
-Retrieve an existing YouTube transcript as timestamped subtitle segments and full text. Use the text for a video summary and preserve timestamps for citations. The default selects automatic captions; this tool does not perform speech recognition, translation or fallback to another track.
+Get an existing YouTube transcript as timestamped subtitle segments and full text. Use the text for a video summary and the timestamps for citations. The default selects automatic captions; this tool does not perform speech recognition, translation or fallback to another track.
 
 [Get an API key](https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_transcript-task) · [API documentation](https://flashdata.dev/docs/sources/youtube_transcript?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_transcript-task) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_transcript-task)
 
@@ -14,7 +14,7 @@ Retrieve an existing YouTube transcript as timestamped subtitle segments and ful
 
 [Example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_transcript/youtube_transcript.yml): **Start → YouTube Transcript → End**. Select your credential, then supply the Start input.
 
-Enter only `video_id` in **Start**. Set the remaining fields in the tool node.
+In the example workflow, enter `video_id` in **Start**. Configure the other fields shown below in the tool node; you can also bind them to Start variables in your own workflow.
 
 | Field | Where to set it | Example | Meaning |
 | --- | --- | --- | --- |

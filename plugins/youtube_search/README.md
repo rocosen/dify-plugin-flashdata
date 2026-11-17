@@ -1,6 +1,6 @@
 # YouTube Search
 
-Find YouTube videos about a topic and pass their video IDs to a later metadata or transcript step. Filter by upload date, duration, type, features or sort order. Request 1–20 results; actual results may be fewer.
+Search YouTube by keyword to find videos for a topic. Filter by upload date, duration, type, features or sort order, then pass video IDs to a metadata or transcript step. Request 1–20 results; actual results may be fewer.
 
 [Get an API key](https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search-task) · [API documentation](https://flashdata.dev/docs/sources/youtube_search?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search-task) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search-task)
 
@@ -14,7 +14,7 @@ Find YouTube videos about a topic and pass their video IDs to a later metadata o
 
 [Example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_search/youtube_search.yml): **Start → YouTube Search → End**. Select your credential, then supply the Start input.
 
-Enter only `query` in **Start**. Set the remaining fields in the tool node.
+In the example workflow, enter `query` in **Start**. Configure the other fields shown below in the tool node; you can also bind them to Start variables in your own workflow.
 
 | Field | Where to set it | Example | Meaning |
 | --- | --- | --- | --- |

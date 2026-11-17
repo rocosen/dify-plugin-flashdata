@@ -1,6 +1,6 @@
 # YouTube Video Metadata
 
-Enrich a video record with its title, description, channel, available statistics and YouTube video chapters. Accepts a video ID or YouTube video URL. Request chapters for a navigation outline; leave format metadata off when it is unnecessary.
+Read a YouTube video’s title, description, channel, available statistics and chapters from its video ID or URL. Use chapters for a navigation outline and enable format metadata when you need it.
 
 [Get an API key](https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_metadata-task) · [API documentation](https://flashdata.dev/docs/sources/youtube_metadata?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_metadata-task) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_metadata-task)
 
@@ -14,7 +14,7 @@ Enrich a video record with its title, description, channel, available statistics
 
 [Example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_metadata/youtube_metadata.yml): **Start → YouTube Video Metadata → End**. Select your credential, then supply the Start input.
 
-Enter only `video_id` in **Start**. Set the remaining fields in the tool node.
+In the example workflow, enter `video_id` in **Start**. Configure the other fields shown below in the tool node; you can also bind them to Start variables in your own workflow.
 
 | Field | Where to set it | Example | Meaning |
 | --- | --- | --- | --- |

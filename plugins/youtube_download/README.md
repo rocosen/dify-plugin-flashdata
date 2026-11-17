@@ -1,6 +1,6 @@
 # YouTube Download
 
-Deliver YouTube video or audio to your own S3 or other supported cloud storage. Submit a download once, save its job ID, then use Get Job and Get Job Results to read progress and the upload manifest. FlashData bills by delivered bytes; customer storage is required.
+Start an asynchronous job to deliver YouTube video or audio to your own S3 or other supported cloud storage. Save the job ID, then use Get Job and Get Job Results to read progress and the upload manifest. FlashData bills by delivered bytes; customer storage is required.
 
 [Get an API key](https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_download-task) · [API documentation](https://flashdata.dev/docs/sources/youtube_download?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_download-task) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_download-task)
 
@@ -26,7 +26,7 @@ JSON results expire after 24 hours; media retention follows your storage setting
 
 [Example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_download/youtube_download.yml): **Start → YouTube Download → End**. Select your credential, then supply the Start input.
 
-Enter only `video_id` in **Start**. Set the remaining fields in the tool node.
+In the example workflow, enter `video_id` in **Start**. Configure the other fields shown below in the tool node; you can also bind them to Start variables in your own workflow.
 
 | Field | Where to set it | Example | Meaning |
 | --- | --- | --- | --- |
