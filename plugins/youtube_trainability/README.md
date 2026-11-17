@@ -1,6 +1,6 @@
 # YouTube License Metadata
 
-Read the Creative Commons license classification exposed by YouTube video metadata and keep it alongside a research record. The API source is youtube_trainability. It does not read creator third-party training settings or grant training or reuse permission.
+Read a YouTube video’s Creative Commons license classification and keep it with your video records. The API source ID is `youtube_trainability`. This reports license metadata; it does not read creator third-party training settings or grant training or reuse permission.
 
 [Get an API key](https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_trainability-task) · [API documentation](https://flashdata.dev/docs/sources/youtube_trainability?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_trainability-task) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_trainability-task)
 

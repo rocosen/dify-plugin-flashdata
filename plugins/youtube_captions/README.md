@@ -1,6 +1,6 @@
 # YouTube Captions
 
-Retrieve existing YouTube manual captions uploaded by the creator, including subtitle segments and full text in a selected language. Use the timestamps in a reading view or subtitle conversion step. The default selects uploader captions; set auto=true only when you explicitly want automatic captions.
+Get existing creator-uploaded YouTube captions as timestamped subtitle segments and full text in a selected language. The default is `auto=false` for uploader captions; set `auto=true` to select automatic captions. Use the timestamps in a reading view or subtitle conversion step.
 
 [Get an API key](https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_captions-task) · [API documentation](https://flashdata.dev/docs/sources/youtube_captions?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_captions-task) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_captions-task)
 
@@ -14,7 +14,7 @@ Retrieve existing YouTube manual captions uploaded by the creator, including sub
 
 [Example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_captions/youtube_captions.yml): **Start → YouTube Captions → End**. Select your credential, then supply the Start input.
 
-Enter only `video_id` in **Start**. Set the remaining fields in the tool node.
+In the example workflow, enter `video_id` in **Start**. Configure the other fields shown below in the tool node; you can also bind them to Start variables in your own workflow.
 
 | Field | Where to set it | Example | Meaning |
 | --- | --- | --- | --- |

@@ -1,6 +1,6 @@
 # Google Video Search
 
-Find video tutorials and explainers across websites with Google Video Search. Compare returned titles, links, sources and available durations, then let the reader open the original video page.
+Search for videos across websites with Google Video Search. Compare titles, source links, snippets and available durations, then open the original video pages for further research.
 
 [Get an API key](https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_videos-task) · [API documentation](https://flashdata.dev/docs/sources/google_videos?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_videos-task) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_videos-task)
 
@@ -14,7 +14,7 @@ Find video tutorials and explainers across websites with Google Video Search. Co
 
 [Example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/google_videos/google_videos.yml): **Start → Google Video Search → End**. Select your credential, then supply the Start input.
 
-Enter only `query` in **Start**. Set the remaining fields in the tool node.
+In the example workflow, enter `query` in **Start**. Configure the other fields shown below in the tool node; you can also bind them to Start variables in your own workflow.
 
 | Field | Where to set it | Example | Meaning |
 | --- | --- | --- | --- |

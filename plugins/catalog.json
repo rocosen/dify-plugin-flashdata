@@ -1,7 +1,7 @@
 {
   "google_search": {
     "name": "google_search",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "Google Search",
       "zh_Hans": "Google 搜索"
@@ -11,11 +11,12 @@
     },
     "tags": [
       "search"
-    ]
+    ],
+    "icon": "google.svg"
   },
   "google_news": {
     "name": "google_news",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "Google News",
       "zh_Hans": "Google 新闻"
@@ -25,11 +26,12 @@
     },
     "tags": [
       "search"
-    ]
+    ],
+    "icon": "google.svg"
   },
   "google_images": {
     "name": "google_images",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "Google Images",
       "zh_Hans": "Google 图片搜索"
@@ -39,11 +41,12 @@
     },
     "tags": [
       "search"
-    ]
+    ],
+    "icon": "google.svg"
   },
   "google_shopping": {
     "name": "google_shopping",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "Google Shopping",
       "zh_Hans": "Google 购物搜索"
@@ -53,11 +56,12 @@
     },
     "tags": [
       "search"
-    ]
+    ],
+    "icon": "google.svg"
   },
   "google_videos": {
     "name": "google_videos",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "Google Video Search",
       "zh_Hans": "Google 视频搜索"
@@ -67,11 +71,12 @@
     },
     "tags": [
       "search"
-    ]
+    ],
+    "icon": "google.svg"
   },
   "google_places": {
     "name": "google_places",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "Google Places",
       "zh_Hans": "Google 地点搜索"
@@ -81,11 +86,12 @@
     },
     "tags": [
       "search"
-    ]
+    ],
+    "icon": "google.svg"
   },
   "youtube_search": {
     "name": "youtube_search",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "YouTube Search",
       "zh_Hans": "YouTube 搜索"
@@ -95,11 +101,12 @@
     },
     "tags": [
       "videos"
-    ]
+    ],
+    "icon": "youtube.svg"
   },
   "youtube_search_extended": {
     "name": "youtube_search_extended",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "YouTube Extended Search",
       "zh_Hans": "YouTube 扩展搜索"
@@ -109,11 +116,12 @@
     },
     "tags": [
       "videos"
-    ]
+    ],
+    "icon": "youtube.svg"
   },
   "youtube_metadata": {
     "name": "youtube_metadata",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "YouTube Video Metadata",
       "zh_Hans": "YouTube 视频元数据"
@@ -123,11 +131,12 @@
     },
     "tags": [
       "videos"
-    ]
+    ],
+    "icon": "youtube.svg"
   },
   "youtube_transcript": {
     "name": "youtube_transcript",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "YouTube Transcript",
       "zh_Hans": "YouTube 自动字幕"
@@ -137,11 +146,12 @@
     },
     "tags": [
       "videos"
-    ]
+    ],
+    "icon": "youtube.svg"
   },
   "youtube_captions": {
     "name": "youtube_captions",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "YouTube Captions",
       "zh_Hans": "YouTube 上传者字幕"
@@ -151,11 +161,12 @@
     },
     "tags": [
       "videos"
-    ]
+    ],
+    "icon": "youtube.svg"
   },
   "youtube_trainability": {
     "name": "youtube_trainability",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "YouTube License Metadata",
       "zh_Hans": "YouTube 许可元数据"
@@ -165,11 +176,12 @@
     },
     "tags": [
       "videos"
-    ]
+    ],
+    "icon": "youtube.svg"
   },
   "youtube_channel": {
     "name": "youtube_channel",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "YouTube Channel Data",
       "zh_Hans": "YouTube 频道数据"
@@ -179,11 +191,12 @@
     },
     "tags": [
       "videos"
-    ]
+    ],
+    "icon": "youtube.svg"
   },
   "youtube_suggestions": {
     "name": "youtube_suggestions",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "YouTube Autocomplete",
       "zh_Hans": "YouTube 搜索建议"
@@ -193,11 +206,12 @@
     },
     "tags": [
       "videos"
-    ]
+    ],
+    "icon": "youtube.svg"
   },
   "youtube_download": {
     "name": "youtube_download",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "label": {
       "en_US": "YouTube Download",
       "zh_Hans": "YouTube 视频下载"
@@ -207,6 +221,7 @@
     },
     "tags": [
       "videos"
-    ]
+    ],
+    "icon": "youtube.svg"
   }
 }

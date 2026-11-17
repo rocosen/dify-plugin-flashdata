@@ -1,6 +1,6 @@
 # Google Shopping
 
-Run a Google Shopping product search to compare merchant listings for the same query. Return available price labels and offer links for a shopping comparison workflow. Keep a dated snapshot: prices, variants and availability can change.
+Search Google Shopping for product listings from different merchants. Compare available price labels and offer links for the same query. Keep a dated snapshot: prices, variants and availability can change.
 
 [Get an API key](https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_shopping-task) · [API documentation](https://flashdata.dev/docs/sources/google_shopping?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_shopping-task) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=google_shopping-task)
 
@@ -14,7 +14,7 @@ Run a Google Shopping product search to compare merchant listings for the same q
 
 [Example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/google_shopping/google_shopping.yml): **Start → Google Shopping → End**. Select your credential, then supply the Start input.
 
-Enter only `query` in **Start**. Set the remaining fields in the tool node.
+In the example workflow, enter `query` in **Start**. Configure the other fields shown below in the tool node; you can also bind them to Start variables in your own workflow.
 
 | Field | Where to set it | Example | Meaning |
 | --- | --- | --- | --- |

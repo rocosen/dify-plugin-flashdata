@@ -1,6 +1,6 @@
 # YouTube Extended Search
 
-Collect a larger set of YouTube search results for a topic survey or video research table. Extended Search supports the same filters as standard search and accepts 1–700 requested results. It has a separate FlashData price; the limit is not a guaranteed result count.
+Search YouTube for a larger video research set, with 1–700 requested results and the same filters as standard search. Export the returned videos into a research table. Extended Search has a separate FlashData price; actual results may be fewer.
 
 [Get an API key](https://flashdata.dev/signup?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search_extended-task) · [API documentation](https://flashdata.dev/docs/sources/youtube_search_extended?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search_extended-task) · [Pricing](https://flashdata.dev/pricing?utm_source=dify&utm_medium=integration&utm_campaign=intent_gtm_2026q4&utm_content=youtube_search_extended-task)
 
@@ -14,7 +14,7 @@ Collect a larger set of YouTube search results for a topic survey or video resea
 
 [Example workflow](https://github.com/rocosen/dify-plugin-flashdata/blob/main/plugins/youtube_search_extended/youtube_search_extended.yml): **Start → YouTube Extended Search → End**. Select your credential, then supply the Start input.
 
-Enter only `query` in **Start**. Set the remaining fields in the tool node.
+In the example workflow, enter `query` in **Start**. Configure the other fields shown below in the tool node; you can also bind them to Start variables in your own workflow.
 
 | Field | Where to set it | Example | Meaning |
 | --- | --- | --- | --- |
